@@ -1,14 +1,523 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8"><title>Collection V.A.L.E.U.R©</title></head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Collection V.A.L.E.U.R© — Les 7 Workbooks | Céline Bourbon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#C9A84C;--goldl:#F0D080;
+  --ink:#1C1A14;--inkm:#3A3628;--inkl:#6B6554;
+  --cream:#F9F5EE;--creamm:#EDE8DC;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#111;
+  font-family:'Jost',sans-serif;
+  color:var(--cream);
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+
+/* ── HEADER ────────────────────────────────────────────────── */
+.site-header{
+  text-align:center;
+  padding:4rem 1rem 3rem;
+  border-bottom:1px solid rgba(201,168,76,.15);
+  background:linear-gradient(180deg,#0a0a0a 0%,#111 100%);
+}
+.header-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11pt;
+  font-weight:500;
+  letter-spacing:.45em;
+  text-transform:uppercase;
+  color:var(--gold);
+  opacity:.7;
+  display:block;
+  margin-bottom:1.5rem;
+}
+.header-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28pt;
+  font-weight:600;
+  line-height:1.15;
+  color:var(--cream);
+  margin-bottom:1rem;
+}
+.header-title em{color:var(--goldl);font-style:italic}
+.header-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:12pt;
+  font-style:italic;
+  color:rgba(249,245,238,.45);
+  max-width:480px;
+  margin:0 auto 2rem;
+  line-height:1.6;
+}
+.header-author{
+  font-size:7pt;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:rgba(201,168,76,.5);
+}
+
+/* ── GRILLE COLLECTION ─────────────────────────────────────── */
+.collection{
+  max-width:1100px;
+  margin:0 auto;
+  padding:3.5rem 1.5rem 5rem;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:2rem;
+}
+
+/* ── CARD MASQUE ───────────────────────────────────────────── */
+.card{
+  position:relative;
+  border-radius:2px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:transform .3s ease, box-shadow .3s ease;
+  text-decoration:none;
+  display:block;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 60px rgba(0,0,0,.7),0 4px 12px rgba(0,0,0,.4);
+}
+.card-cover{
+  aspect-ratio:148/210; /* A5 proportion */
+  display:flex;
+  flex-direction:column;
+  padding:1.5rem 1.2rem;
+  position:relative;
+  justify-content:space-between;
+}
+/* Filet gauche doré */
+.card-cover::before{
+  content:'';
+  position:absolute;
+  left:0;top:10%;bottom:10%;
+  width:2px;
+  background:linear-gradient(180deg,transparent,var(--gold),transparent);
+  opacity:.5;
+}
+/* Vignette */
+.card-vignette{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 90% 90% at 50% 50%,transparent 30%,rgba(0,0,0,.55) 100%);
+  z-index:1;pointer-events:none;
+}
+.card-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;}
+.card-vol{
+  font-size:5pt;
+  letter-spacing:.45em;
+  text-transform:uppercase;
+  color:var(--gold);
+  opacity:.55;
+  margin-bottom:auto;
+}
+.card-body{margin:auto 0;}
+.card-label{
+  font-size:5pt;
+  letter-spacing:.42em;
+  text-transform:uppercase;
+  color:rgba(249,245,238,.35);
+  display:block;
+  margin-bottom:.4rem;
+}
+.card-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22pt;
+  font-weight:600;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  line-height:1;
+  color:rgba(249,245,238,.92);
+  display:block;
+  margin-bottom:.5rem;
+}
+.card-rule{width:12mm;height:.5px;background:var(--gold);opacity:.5;margin-bottom:.75rem;}
+.card-fear{
+  font-family:'Cormorant Garamond',serif;
+  font-size:9pt;
+  font-weight:400;
+  font-style:italic;
+  line-height:1.4;
+  color:rgba(249,245,238,.65);
+}
+.card-foot{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  margin-top:auto;
+}
+.card-author{
+  font-size:5.5pt;
+  letter-spacing:.06em;
+  color:rgba(249,245,238,.28);
+  line-height:1.7;
+}
+.card-author strong{
+  font-family:'Cormorant Garamond',serif;
+  font-size:7pt;
+  color:rgba(249,245,238,.55);
+  font-weight:500;
+  display:block;
+}
+.card-weeks{
+  text-align:right;
+  font-family:'Cormorant Garamond',serif;
+}
+.card-wn{
+  font-size:18pt;font-weight:300;
+  color:var(--gold);opacity:.5;
+  display:block;line-height:1;
+}
+.card-wl{font-size:5.5pt;font-style:italic;color:rgba(201,168,76,.3);}
+
+/* ── BADGES ACTION ─────────────────────────────────────────── */
+.card-actions{
+  display:flex;gap:.5rem;margin-top:.75rem;
+}
+.btn{
+  flex:1;
+  padding:.55em .6em;
+  font-family:'Jost',sans-serif;
+  font-size:6pt;
+  font-weight:600;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  border:none;cursor:pointer;
+  border-radius:1px;
+  text-align:center;
+  text-decoration:none;
+  transition:opacity .2s;
+  display:block;
+}
+.btn:hover{opacity:.82}
+.btn-preview{
+  background:rgba(249,245,238,.08);
+  color:rgba(249,245,238,.6);
+  border:1px solid rgba(249,245,238,.15);
+}
+.btn-open{
+  background:var(--gold);
+  color:#111;
+}
+
+/* ── FOOTER ────────────────────────────────────────────────── */
+.site-footer{
+  text-align:center;
+  padding:2.5rem 1rem;
+  border-top:1px solid rgba(201,168,76,.1);
+  font-size:6pt;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  color:rgba(201,168,76,.3);
+  line-height:2;
+}
+
+/* ── MODAL PRÉVISUALISATION ────────────────────────────────── */
+.modal{
+  display:none;
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.88);
+  z-index:1000;
+  align-items:center;justify-content:center;
+  padding:1.5rem;
+}
+.modal.open{display:flex;}
+.modal-inner{
+  background:#1a1a1a;
+  border:1px solid rgba(201,168,76,.2);
+  border-radius:2px;
+  max-width:620px;
+  width:100%;
+  max-height:92vh;
+  overflow-y:auto;
+  position:relative;
+}
+.modal-close{
+  position:absolute;top:1rem;right:1rem;
+  background:none;border:none;cursor:pointer;
+  color:rgba(201,168,76,.6);font-size:1.2rem;
+  z-index:10;
+}
+.modal-frame{
+  width:100%;aspect-ratio:3/4;border:none;
+  pointer-events:none; /* preview only */
+}
+.modal-info{
+  padding:1.2rem 1.5rem 1.5rem;
+  border-top:1px solid rgba(201,168,76,.1);
+}
+.modal-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14pt;font-weight:600;
+  color:var(--cream);margin-bottom:.4rem;
+}
+.modal-desc{
+  font-size:7.5pt;line-height:1.8;
+  color:rgba(249,245,238,.55);
+  margin-bottom:1.2rem;
+}
+.modal-actions{display:flex;gap:.75rem;}
+.modal-btn{
+  flex:1;padding:.7em 1em;
+  font-family:'Jost',sans-serif;font-size:6.5pt;
+  font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  border:none;cursor:pointer;border-radius:1px;
+  text-decoration:none;text-align:center;
+  transition:opacity .2s;
+}
+.modal-btn:hover{opacity:.82}
+.modal-btn-print{background:var(--gold);color:#111;}
+.modal-btn-open{background:rgba(249,245,238,.08);color:rgba(249,245,238,.7);border:1px solid rgba(249,245,238,.15);}
+</style>
+</head>
 <body>
-<h2>Collection des Livrets V.A.L.E.U.R©</h2>
-<ul>
-  <li><a href="livret_masque_vert_COMPLET.html">Masque Vert</a></li>
-  <li><a href="livret_masque_rouge_COMPLET.html">Masque Rouge</a></li>
-  <li><a href="livret_masque_orange_COMPLET.html">Masque Orange</a></li>
-  <li><a href="livret_masque_jaune_COMPLET.html">Masque Jaune</a></li>
-  <li><a href="livret_masque_bleu_COMPLET.html">Masque Bleu</a></li>
-</ul>
+
+<header class="site-header">
+  <span class="header-logo">V.A.L.E.U.R©</span>
+  <h1 class="header-title">Les 7 Workbooks<br><em>de transformation</em></h1>
+  <p class="header-sub">Chaque livret cible une peur fondatrice. 12 semaines de travail guidé, d'exercices et de journal de bord.</p>
+  <span class="header-author">Céline Bourbon — Psychologue · Auteure · Méthode V.A.L.E.U.R©</span>
+</header>
+
+<main class="collection">
+
+  <!-- ── ROUGE ── -->
+  <div class="card-wrap">
+    <a class="card" href="livret_masque_rouge_COMPLET.html" target="_blank">
+      <div class="card-cover" style="background:linear-gradient(168deg,#6b1010 0%,#3d0808 55%,#1c0404 100%)">
+        <div class="card-vignette"></div>
+        <div class="card-inner">
+          <span class="card-vol">Volume I · 12 semaines</span>
+          <div class="card-body">
+            <span class="card-label">Masque</span>
+            <span class="card-name">Rouge</span>
+            <div class="card-rule"></div>
+            <span class="card-fear">La peur de la mort<br>et de la maladie</span>
+          </div>
+          <div class="card-foot">
+            <div class="card-author"><strong>Céline Bourbon</strong>Psychologue</div>
+            <div class="card-weeks"><span class="card-wn">12</span><span class="card-wl">semaines</span></div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="card-actions">
+      <a class="btn btn-preview" href="#" onclick="openModal('rouge','La peur de la mort et de la maladie','livret_masque_rouge_COMPLET.html');return false">👁 Aperçu</a>
+      <a class="btn btn-open" href="livret_masque_rouge_COMPLET.html" target="_blank">Ouvrir / Imprimer</a>
+    </div>
+  </div>
+
+  <!-- ── ORANGE ── -->
+  <div class="card-wrap">
+    <a class="card" href="livret_masque_orange_COMPLET.html" target="_blank">
+      <div class="card-cover" style="background:linear-gradient(168deg,#7a2e00 0%,#3d1600 55%,#1e0800 100%)">
+        <div class="card-vignette"></div>
+        <div class="card-inner">
+          <span class="card-vol">Volume II · 12 semaines</span>
+          <div class="card-body">
+            <span class="card-label">Masque</span>
+            <span class="card-name">Orange</span>
+            <div class="card-rule"></div>
+            <span class="card-fear">La peur de la souffrance<br>psychique</span>
+          </div>
+          <div class="card-foot">
+            <div class="card-author"><strong>Céline Bourbon</strong>Psychologue</div>
+            <div class="card-weeks"><span class="card-wn">12</span><span class="card-wl">semaines</span></div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="card-actions">
+      <a class="btn btn-preview" href="#" onclick="openModal('orange','La peur de la souffrance psychique','livret_masque_orange_COMPLET.html');return false">👁 Aperçu</a>
+      <a class="btn btn-open" href="livret_masque_orange_COMPLET.html" target="_blank">Ouvrir / Imprimer</a>
+    </div>
+  </div>
+
+  <!-- ── JAUNE ── -->
+  <div class="card-wrap">
+    <a class="card" href="livret_masque_jaune_COMPLET.html" target="_blank">
+      <div class="card-cover" style="background:linear-gradient(168deg,#5a5000 0%,#2e2800 55%,#181600 100%)">
+        <div class="card-vignette"></div>
+        <div class="card-inner">
+          <span class="card-vol">Volume III · 12 semaines</span>
+          <div class="card-body">
+            <span class="card-label">Masque</span>
+            <span class="card-name">Jaune</span>
+            <div class="card-rule"></div>
+            <span class="card-fear">La peur de l'inconnu<br>et de l'incertitude</span>
+          </div>
+          <div class="card-foot">
+            <div class="card-author"><strong>Céline Bourbon</strong>Psychologue</div>
+            <div class="card-weeks"><span class="card-wn">12</span><span class="card-wl">semaines</span></div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="card-actions">
+      <a class="btn btn-preview" href="#" onclick="openModal('jaune','La peur de l\'inconnu et de l\'incertitude','livret_masque_jaune_COMPLET.html');return false">👁 Aperçu</a>
+      <a class="btn btn-open" href="livret_masque_jaune_COMPLET.html" target="_blank">Ouvrir / Imprimer</a>
+    </div>
+  </div>
+
+  <!-- ── VERT ── -->
+  <div class="card-wrap">
+    <a class="card" href="livret_masque_vert_COMPLET.html" target="_blank">
+      <div class="card-cover" style="background:linear-gradient(168deg,#1a4a20 0%,#0d2410 55%,#040c06 100%)">
+        <div class="card-vignette"></div>
+        <div class="card-inner">
+          <span class="card-vol">Volume IV · 12 semaines</span>
+          <div class="card-body">
+            <span class="card-label">Masque</span>
+            <span class="card-name">Vert</span>
+            <div class="card-rule"></div>
+            <span class="card-fear">La peur du rejet<br>ou de l'abandon</span>
+          </div>
+          <div class="card-foot">
+            <div class="card-author"><strong>Céline Bourbon</strong>Psychologue</div>
+            <div class="card-weeks"><span class="card-wn">12</span><span class="card-wl">semaines</span></div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="card-actions">
+      <a class="btn btn-preview" href="#" onclick="openModal('vert','La peur du rejet ou de l\'abandon','livret_masque_vert_COMPLET.html');return false">👁 Aperçu</a>
+      <a class="btn btn-open" href="livret_masque_vert_COMPLET.html" target="_blank">Ouvrir / Imprimer</a>
+    </div>
+  </div>
+
+  <!-- ── BLEU ── -->
+  <div class="card-wrap">
+    <a class="card" href="livret_masque_bleu_COMPLET.html" target="_blank">
+      <div class="card-cover" style="background:linear-gradient(168deg,#0c2868 0%,#06163a 55%,#020c1e 100%)">
+        <div class="card-vignette"></div>
+        <div class="card-inner">
+          <span class="card-vol">Volume V · 12 semaines</span>
+          <div class="card-body">
+            <span class="card-label">Masque</span>
+            <span class="card-name">Bleu</span>
+            <div class="card-rule"></div>
+            <span class="card-fear">La peur de l'impuissance<br>et de perdre le contrôle</span>
+          </div>
+          <div class="card-foot">
+            <div class="card-author"><strong>Céline Bourbon</strong>Psychologue</div>
+            <div class="card-weeks"><span class="card-wn">12</span><span class="card-wl">semaines</span></div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="card-actions">
+      <a class="btn btn-preview" href="#" onclick="openModal('bleu','La peur de l\'impuissance','livret_masque_bleu_COMPLET.html');return false">👁 Aperçu</a>
+      <a class="btn btn-open" href="livret_masque_bleu_COMPLET.html" target="_blank">Ouvrir / Imprimer</a>
+    </div>
+  </div>
+
+  <!-- ── INDIGO ── -->
+  <div class="card-wrap">
+    <a class="card" href="livret_masque_indigo_COMPLET.html" target="_blank">
+      <div class="card-cover" style="background:linear-gradient(168deg,#2a1080 0%,#140840 55%,#080220 100%)">
+        <div class="card-vignette"></div>
+        <div class="card-inner">
+          <span class="card-vol">Volume VI · 12 semaines</span>
+          <div class="card-body">
+            <span class="card-label">Masque</span>
+            <span class="card-name">Indigo</span>
+            <div class="card-rule"></div>
+            <span class="card-fear">La peur de l'échec<br>et de l'inadéquation</span>
+          </div>
+          <div class="card-foot">
+            <div class="card-author"><strong>Céline Bourbon</strong>Psychologue</div>
+            <div class="card-weeks"><span class="card-wn">12</span><span class="card-wl">semaines</span></div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="card-actions">
+      <a class="btn btn-preview" href="#" onclick="openModal('indigo','La peur de l\'échec et de l\'inadéquation','livret_masque_indigo_COMPLET.html');return false">👁 Aperçu</a>
+      <a class="btn btn-open" href="livret_masque_indigo_COMPLET.html" target="_blank">Ouvrir / Imprimer</a>
+    </div>
+  </div>
+
+  <!-- ── VIOLET ── -->
+  <div class="card-wrap">
+    <a class="card" href="livret_masque_violet_COMPLET.html" target="_blank">
+      <div class="card-cover" style="background:linear-gradient(168deg,#5a1090 0%,#2a0850 55%,#140020 100%)">
+        <div class="card-vignette"></div>
+        <div class="card-inner">
+          <span class="card-vol">Volume VII · 12 semaines</span>
+          <div class="card-body">
+            <span class="card-label">Masque</span>
+            <span class="card-name">Violet</span>
+            <div class="card-rule"></div>
+            <span class="card-fear">La peur de perdre son identité<br>— l'angoisse du faux self</span>
+          </div>
+          <div class="card-foot">
+            <div class="card-author"><strong>Céline Bourbon</strong>Psychologue</div>
+            <div class="card-weeks"><span class="card-wn">12</span><span class="card-wl">semaines</span></div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="card-actions">
+      <a class="btn btn-preview" href="#" onclick="openModal('violet','La peur de perdre son identité','livret_masque_violet_COMPLET.html');return false">👁 Aperçu</a>
+      <a class="btn btn-open" href="livret_masque_violet_COMPLET.html" target="_blank">Ouvrir / Imprimer</a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  © Céline Bourbon · Méthode V.A.L.E.U.R© · Tous droits réservés<br>
+  De la peur à la joie d'être soi · Éditions L'Harmattan
+</footer>
+
+<!-- ── MODAL ── -->
+<div class="modal" id="modal">
+  <div class="modal-inner">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <iframe class="modal-frame" id="modal-frame" src="" title="Aperçu du livret"></iframe>
+    <div class="modal-info">
+      <div class="modal-title" id="modal-title"></div>
+      <p class="modal-desc" id="modal-desc"></p>
+      <div class="modal-actions">
+        <a class="modal-btn modal-btn-print" id="modal-print" href="#" target="_blank">🖨 Ouvrir &amp; Imprimer</a>
+        <button class="modal-btn modal-btn-open" onclick="closeModal()">Fermer l'aperçu</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const DESCS = {
+  rouge:'12 semaines pour transformer la peur de la mort et de la maladie en conscience aiguë de la préciosité de la vie.',
+  orange:'12 semaines pour accueillir les émotions difficiles et libérer une créativité longtemps muselée.',
+  jaune:'12 semaines pour passer de la paralysie de l\'incertitude à la confiance dans votre capacité d\'adaptation.',
+  vert:'12 semaines pour être enfin aimé·e pour qui vous êtes — et non pour ce que vous faites.',
+  bleu:'12 semaines pour influencer sans dominer, déléguer vraiment, et récupérer votre énergie.',
+  indigo:'12 semaines pour agir depuis votre valeur — et découvrir que votre valeur ne dépend pas de vos résultats.',
+  violet:'12 semaines pour enlever, couche après couche, ce qui n\'est pas vous — et retrouver ce qui a toujours été là.',
+};
+function openModal(key, fear, file){
+  document.getElementById('modal').classList.add('open');
+  document.getElementById('modal-frame').src = file;
+  document.getElementById('modal-title').textContent = 'Masque ' + key.charAt(0).toUpperCase() + key.slice(1) + ' — ' + fear;
+  document.getElementById('modal-desc').textContent = DESCS[key] || '';
+  document.getElementById('modal-print').href = file;
+}
+function closeModal(){
+  document.getElementById('modal').classList.remove('open');
+  document.getElementById('modal-frame').src = '';
+}
+document.getElementById('modal').addEventListener('click', function(e){
+  if(e.target === this) closeModal();
+});
+</script>
 </body>
 </html>
