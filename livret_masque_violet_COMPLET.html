@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Livret Masque Violet — Méthode V.A.L.E.U.R© · Workbook complet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g900:#030a03;
+  --v900:#0e0118;--v800:#1a0230;--v700:#280450;--v600:#3d0878;
+  --v500:#520a96;--v400:#6e14b4;--v300:#9030d0;--v200:#b860e8;
+  --v100:#d8a0f8;--v50:#f0daff;;--g800:#060e07;--g700:#0a1a0c;--g600:#152e17;
+  --g500:#1e4220;--g400:#28562b;--g300:#3a7a3d;--g200:#5ea862;
+  --g100:#9cd89f;--g50:#d0f0d2;
+  --gold:#C9A84C;--goldm:#D4AF37;--goldl:#F0D080;--goldp:#FBF0D0;
+  --cream:#F9F5EE;--creamm:#EDE8DC;--creamd:#D4CEBF;
+  --ink:#1C1A14;--inkm:#3A3628;--inkl:#6B6554;--inkf:#9A9284;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{background:#ede9e0;font-family:'Jost',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;-webkit-user-select:none;-moz-user-select:none;user-select:none}
+
+/* ── BOOK WRAPPER */
+.book{max-width:680px;margin:0 auto;padding:2rem 1rem 6rem;display:flex;flex-direction:column;gap:0}
+
+/* ── PAGE BASE */
+.page{width:148mm;min-height:210mm;margin:0 auto 2px;position:relative;overflow:hidden;box-shadow:0 6px 35px rgba(0,0,0,.55),0 2px 8px rgba(0,0,0,.35)}
+
+/* ── COVER */
+.page-cover{background:var(--v900);display:flex;flex-direction:column;min-height:210mm}
+.page-cover::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2.5px;z-index:5;background:linear-gradient(180deg,transparent 0%,var(--gold) 18%,var(--goldl) 50%,var(--gold) 82%,transparent 100%);opacity:.5}
+.cov-vignette{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 88% 88% at 50% 50%,transparent 32%,rgba(0,0,0,.62) 100%)}
+.cov-light{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 65% 50% at 50% 42%,rgba(24,68,28,.2) 0%,transparent 70%)}
+.cov-rl-t{position:absolute;top:13.5mm;left:9mm;right:9mm;height:.4px;z-index:6;background:linear-gradient(90deg,transparent,var(--gold) 22%,var(--gold) 78%,transparent);opacity:.35}
+.cov-rl-b{position:absolute;bottom:23mm;left:9mm;right:9mm;height:.4px;z-index:6;background:linear-gradient(90deg,transparent,var(--gold) 22%,var(--gold) 78%,transparent);opacity:.35}
+.cov-inner{position:relative;z-index:10;width:100%;height:100%;display:flex;flex-direction:column;padding:0 11mm;min-height:210mm}
+.cov-head{display:flex;justify-content:space-between;align-items:center;padding-top:6mm}
+.cov-col{font-family:'Jost',sans-serif;font-size:5.5pt;font-weight:400;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);opacity:.58}
+.cov-logo{font-family:'Cormorant Garamond',serif;font-size:7pt;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);opacity:.76}
+.cov-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:4mm}
+.cov-vol{font-family:'Jost',sans-serif;font-size:5pt;font-weight:300;letter-spacing:.32em;text-transform:uppercase;color:var(--v100);opacity:.38;margin-bottom:10mm}
+.cov-ml{font-family:'Jost',sans-serif;font-size:5pt;font-weight:300;letter-spacing:.58em;text-transform:uppercase;color:var(--v100);opacity:.4;display:block;margin-bottom:2.5mm}
+.cov-mn{font-family:'Cormorant Garamond',serif;font-size:30pt;font-weight:600;letter-spacing:.22em;text-transform:uppercase;line-height:1;color:rgba(249,245,238,.92);display:block;margin-bottom:1mm}
+.cov-rule{width:19mm;height:.6px;background:var(--gold);opacity:.62;margin:5mm 0}
+.cov-fl{font-family:'Jost',sans-serif;font-size:5pt;font-weight:300;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);opacity:.43;display:block;margin-bottom:3mm}
+.cov-fear{font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:400;font-style:italic;line-height:1.45;color:rgba(220,248,222,.76);display:block;margin-bottom:11mm}
+.cov-q{font-family:'Cormorant Garamond',serif;font-size:8.5pt;font-weight:300;font-style:italic;line-height:1.65;color:rgba(249,245,238,.28);display:block;padding-left:3.5mm;border-left:.5px solid rgba(201,168,76,.2)}
+.cov-foot{padding-bottom:6mm;display:flex;justify-content:space-between;align-items:flex-end}
+.cov-auth{font-family:'Jost',sans-serif;font-size:6pt;font-weight:300;letter-spacing:.07em;color:rgba(249,245,238,.3);line-height:1.75}
+.cov-auth strong{display:block;font-family:'Cormorant Garamond',serif;font-size:8.5pt;font-weight:500;letter-spacing:.1em;font-style:normal;color:rgba(249,245,238,.6);margin-bottom:.5mm}
+.cov-auth em{font-style:italic;color:rgba(201,168,76,.46)}
+.cov-wk{text-align:right;font-family:'Cormorant Garamond',serif}
+.cov-wn{font-size:22pt;font-weight:300;letter-spacing:-.02em;color:var(--gold);opacity:.6;display:block;line-height:1}
+.cov-wl{font-size:6pt;font-style:italic;color:rgba(201,168,76,.3);margin-top:.5mm}
+
+/* ── PAGE CONTENU CRÈME */
+.page-c{background:var(--cream);display:flex;flex-direction:column;padding:17mm 17mm 17mm 13mm}
+
+/* ── PAGE FONCÉE */
+.page-d{background:var(--v800);display:flex;flex-direction:column;padding:17mm 17mm 17mm 13mm;position:relative;overflow:hidden}
+.page-d::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;z-index:2;background:linear-gradient(180deg,transparent 0%,var(--gold) 20%,var(--goldl) 50%,var(--gold) 80%,transparent 100%);opacity:.42}
+.page-d-bg{position:absolute;right:-3mm;top:6mm;font-family:'Cormorant Garamond',serif;font-size:96pt;font-weight:700;line-height:1;color:rgba(24,64,26,.22);letter-spacing:-.05em;pointer-events:none;z-index:1;-webkit-user-select:none;user-select:none}
+
+/* ── EN-TÊTE / PIED */
+.pg-hd{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7mm;border-bottom:.4px solid var(--creamd);padding-bottom:2mm}
+.pg-ch{font-family:'Jost',sans-serif;font-size:5.5pt;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:var(--inkf)}
+.pg-nb{font-family:'Cormorant Garamond',serif;font-size:7pt;color:var(--inkf)}
+.pg-hd-d{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7mm;border-bottom:.4px solid rgba(255,255,255,.08);padding-bottom:2mm;position:relative;z-index:3}
+.pg-ch-d{font-family:'Jost',sans-serif;font-size:5.5pt;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:rgba(201,168,76,.45)}
+.pg-nb-d{font-family:'Cormorant Garamond',serif;font-size:7pt;color:rgba(201,168,76,.4)}
+
+.pg-ft{margin-top:auto;padding-top:3.5mm;border-top:.4px solid var(--creamd);display:flex;justify-content:space-between;align-items:center}
+.pg-ft-t{font-family:'Jost',sans-serif;font-size:5pt;letter-spacing:.12em;text-transform:uppercase;color:var(--inkf)}
+.pg-ft-d{margin-top:auto;padding-top:3.5mm;border-top:.4px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;position:relative;z-index:3}
+.pg-ft-td{font-family:'Jost',sans-serif;font-size:5pt;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,168,76,.35)}
+.prog{display:flex;gap:2.5px;align-items:center}
+.pl{width:14px;height:14px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:6pt;font-weight:700;background:var(--creamd);color:var(--inkf)}
+.pl.done{background:var(--v600);color:var(--goldl)}
+.pl.act{background:var(--gold);color:var(--ink)}
+.pl0{width:14px;height:14px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:6pt;font-weight:700;background:var(--creamd);color:var(--inkf);border:.5px solid var(--inkf)}
+.pl0.done{background:var(--v600);color:var(--goldl);border-color:var(--v600)}
+.pl0.act{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+
+/* ── TYPO */
+.tag{font-family:'Jost',sans-serif;font-size:5.5pt;font-weight:600;letter-spacing:.35em;text-transform:uppercase;background:var(--v700);color:var(--goldl);display:inline-block;padding:.25em .7em;border-radius:1px;margin-bottom:3.5mm}
+.tag-g{font-family:'Jost',sans-serif;font-size:5.5pt;font-weight:600;letter-spacing:.35em;text-transform:uppercase;background:rgba(201,168,76,.12);color:var(--gold);display:inline-block;padding:.25em .7em;border-radius:1px;margin-bottom:3.5mm}
+h1{font-family:'Cormorant Garamond',serif;font-size:20pt;font-weight:600;line-height:1.1;color:var(--ink);letter-spacing:-.01em;margin-bottom:1mm}
+h1.lh{color:var(--cream)}
+h2{font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:600;line-height:1.2;color:var(--ink);margin-bottom:1mm}
+h2.lh{color:var(--cream)}
+h3{font-family:'Cormorant Garamond',serif;font-size:11pt;font-weight:600;line-height:1.3;color:var(--ink);margin-bottom:1.5mm}
+h3.lh{color:rgba(195,232,196,.9)}
+.sub{font-family:'Cormorant Garamond',serif;font-size:9.5pt;font-style:italic;font-weight:400;color:var(--inkl);margin-bottom:4.5mm;line-height:1.4}
+.sub.lh{color:rgba(195,232,196,.6)}
+.rule-g{width:18mm;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:4.5mm}
+.rule-gl{width:18mm;height:1px;background:linear-gradient(90deg,rgba(201,168,76,.5),transparent);margin-bottom:4.5mm}
+.body{font-family:'Jost',sans-serif;font-size:7.5pt;line-height:1.8;color:var(--inkm);margin-bottom:3.5mm}
+.body.lh{color:rgba(249,245,238,.68)}
+.body strong{font-weight:600;color:var(--ink)}
+.body.lh strong{color:var(--cream)}
+.pq{margin:4mm 0;padding:3.5mm 4.5mm;border-left:1.5px solid var(--gold);background:rgba(201,168,76,.05)}
+.pq p{font-family:'Cormorant Garamond',serif;font-size:9.5pt;font-style:italic;line-height:1.6;color:var(--ink);margin-bottom:1.5mm}
+.pq cite{font-family:'Jost',sans-serif;font-size:5.5pt;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);font-style:normal}
+.pq.lh{background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.38)}
+.pq.lh p{color:rgba(249,245,238,.88)}
+.pq.lh cite{color:rgba(201,168,76,.65)}
+
+/* ── LISTES */
+ul.il{list-style:none;margin-bottom:3.5mm}
+ul.il li{font-family:'Jost',sans-serif;font-size:7.5pt;line-height:1.7;color:var(--inkm);padding:1.5mm 0 1.5mm 5mm;position:relative;border-bottom:.3px solid var(--creamd)}
+ul.il li:first-child{border-top:.3px solid var(--creamd)}
+ul.il li::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:3px;border-radius:50%;background:var(--v400)}
+ul.il li strong{color:var(--ink);font-weight:600}
+
+/* ── GUIDE ITEM */
+.gi{display:flex;gap:4mm;align-items:flex-start;padding:3mm 0;border-bottom:.3px solid var(--creamd)}
+.gi:first-child{border-top:.3px solid var(--creamd)}
+.gi-ico{font-family:'Cormorant Garamond',serif;font-size:15pt;font-weight:300;color:var(--v400);flex-shrink:0;line-height:1;width:6mm;text-align:center;margin-top:-1px}
+.gi-t{font-family:'Jost',sans-serif;font-size:7pt;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:1mm}
+.gi-b{font-family:'Jost',sans-serif;font-size:7.5pt;line-height:1.65;color:var(--inkm)}
+
+/* ── SOMMAIRE */
+.sr{display:flex;align-items:baseline;gap:3mm;padding:2.5mm 0;border-bottom:.3px solid var(--creamd)}
+.sr:first-child{border-top:.3px solid var(--creamd)}
+.srl{width:15px;height:15px;border-radius:50%;background:var(--v600);color:var(--goldl);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:6.5pt;font-weight:700;flex-shrink:0}
+.srl0{width:15px;height:15px;border-radius:50%;background:var(--v800);color:rgba(195,232,196,.55);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:6.5pt;font-weight:700;flex-shrink:0;border:.5px solid var(--v600)}
+.sri{flex:1}
+.srn{font-family:'Jost',sans-serif;font-size:6.5pt;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);display:block}
+.srd{font-family:'Cormorant Garamond',serif;font-size:7.5pt;font-style:italic;color:var(--inkl)}
+.srw{font-family:'Jost',sans-serif;font-size:5.5pt;color:var(--inkf);letter-spacing:.08em;flex-shrink:0}
+
+/* ── COPYRIGHT BOX */
+.cpbox{border:.5px solid var(--creamd);padding:4mm 5mm;margin-bottom:5mm}
+.cpbox p{font-family:'Jost',sans-serif;font-size:6.5pt;line-height:1.75;color:var(--inkl);text-align:center}
+.cpbox p strong{color:var(--ink);font-weight:600}
+
+/* ── EXERCICES REMPLISSABLES */
+.exo-block{margin:3mm 0}
+.exo-q{font-family:'Cormorant Garamond',serif;font-size:9pt;font-style:italic;color:var(--inkm);margin:3.5mm 0 1.5mm;padding-left:3mm;border-left:1.5px solid var(--v300);line-height:1.5}
+.exo-q.lh{color:rgba(195,232,196,.7);border-color:rgba(201,168,76,.4)}
+.wlines{display:flex;flex-direction:column;gap:0;margin-bottom:2mm}
+.wline{height:28px;border-bottom:.7px solid rgba(106,101,84,.22);position:relative;display:flex;align-items:flex-end}
+.wline input{position:absolute;inset:0;background:transparent;border:none;outline:none;font-family:'Jost',sans-serif;font-size:7.5pt;color:var(--ink);padding:0 0 3px;width:100%}
+.wline input::placeholder{color:var(--creamd);font-style:italic}
+.wta{width:100%;border:none;border-bottom:.7px solid rgba(106,101,84,.22);background:transparent;resize:none;font-family:'Jost',sans-serif;font-size:7.5pt;color:var(--ink);padding:2px 0 3px;outline:none;line-height:1.75;margin-bottom:2mm}
+.wta::placeholder{color:var(--creamd);font-style:italic}
+/* échelle */
+.scale{display:flex;align-items:center;gap:0;margin:2mm 0}
+.scale-l{font-family:'Jost',sans-serif;font-size:6pt;color:var(--inkf);letter-spacing:.05em;flex-shrink:0}
+.scale-dots{flex:1;display:flex;justify-content:space-between;align-items:center;padding:0 3mm}
+.sd{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--creamd);cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:'Jost',sans-serif;font-size:6pt;color:var(--inkf);transition:all .2s}
+.sd:hover,.sd.on{background:var(--v600);border-color:var(--v400);color:var(--goldl)}
+
+/* checkboxes */
+.cb-row{display:flex;align-items:flex-start;gap:2.5mm;padding:1.5mm 0;cursor:pointer}
+.cb{width:11px;height:11px;border:.7px solid var(--creamd);border-radius:2px;flex-shrink:0;margin-top:.5px;display:flex;align-items:center;justify-content:center;transition:all .2s;cursor:pointer}
+.cb.on{background:var(--v600);border-color:var(--v400)}
+.cb.on::after{content:'';width:5px;height:3px;border-left:1.5px solid var(--goldl);border-bottom:1.5px solid var(--goldl);transform:rotate(-45deg) translate(1px,-1px)}
+.cb-lbl{font-family:'Jost',sans-serif;font-size:7pt;color:var(--inkm);line-height:1.6}
+
+/* tableau journal */
+.jtable{width:100%;border-collapse:collapse;font-family:'Jost',sans-serif;font-size:6.5pt;margin-bottom:3mm}
+.jtable th{font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--inkf);background:var(--creamm);padding:1.5mm 2mm;border:.4px solid var(--creamd);text-align:left}
+.jtable td{padding:.5mm 0;border:.4px solid var(--creamd);vertical-align:top}
+.jtable td input{width:100%;border:none;outline:none;background:transparent;font-family:'Jost',sans-serif;font-size:6.5pt;color:var(--ink);padding:1mm 2mm}
+.jtable td input::placeholder{color:var(--creamd)}
+
+/* grille 2 colonnes */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:2.5mm;margin:3mm 0}
+.gcell{padding:3mm 3.5mm;border:.5px solid var(--creamd);background:rgba(0,0,0,.02)}
+.gcell-d{padding:3mm 3.5mm;border:.5px solid rgba(255,255,255,.08);background:rgba(0,0,0,.15)}
+.gc-lbl{font-family:'Jost',sans-serif;font-size:5.5pt;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--inkf);display:block;margin-bottom:1.5mm}
+.gc-lbl-g{font-family:'Jost',sans-serif;font-size:5.5pt;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--v300);display:block;margin-bottom:1.5mm}
+.gc-lbl-d{font-family:'Jost',sans-serif;font-size:5.5pt;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,168,76,.5);display:block;margin-bottom:1.5mm}
+.gc-txt{font-family:'Cormorant Garamond',serif;font-size:8pt;font-style:italic;color:var(--inkm);line-height:1.5}
+.gc-txt-d{font-family:'Cormorant Garamond',serif;font-size:8pt;font-style:italic;color:rgba(249,245,238,.65);line-height:1.5}
+
+/* numérotation étapes */
+.step-n{display:flex;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:.3px solid var(--creamd)}
+.step-n:first-child{border-top:.3px solid var(--creamd)}
+.step-nb{font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:300;color:var(--v300);flex-shrink:0;width:7mm;text-align:center;line-height:1;margin-top:-1px}
+.step-b{flex:1}
+.step-t{font-family:'Jost',sans-serif;font-size:7pt;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:1mm}
+.step-tx{font-family:'Jost',sans-serif;font-size:7.5pt;line-height:1.65;color:var(--inkm)}
+
+/* loi des 90j */
+.l90{display:grid;grid-template-columns:repeat(3,1fr);gap:2mm;margin:3mm 0}
+.l90cell{padding:3mm;border:.5px solid var(--creamd);text-align:center}
+.l90n{font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:300;color:var(--gold);opacity:.7;display:block}
+.l90t{font-family:'Jost',sans-serif;font-size:5.5pt;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);display:block;margin:1.5mm 0 1mm}
+.l90b{font-family:'Jost',sans-serif;font-size:6.5pt;color:var(--inkl);line-height:1.55}
+
+/* section de fin */
+.end-page{background:var(--v800);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:18mm 12mm;min-height:210mm;position:relative;overflow:hidden}
+.end-page::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;z-index:2;background:linear-gradient(180deg,transparent 0%,var(--gold) 20%,var(--goldl) 50%,var(--gold) 80%,transparent 100%);opacity:.42}
+.end-bg{position:absolute;font-family:'Cormorant Garamond',serif;font-size:70pt;font-weight:700;color:rgba(24,64,26,.15);letter-spacing:-.05em;z-index:1;pointer-events:none;-webkit-user-select:none;user-select:none;line-height:1}
+.end-inner{position:relative;z-index:10;width:100%}
+.end-small{font-family:'Jost',sans-serif;font-size:5pt;font-weight:400;letter-spacing:.5em;text-transform:uppercase;color:rgba(201,168,76,.4);margin-bottom:6mm}
+.end-big{font-family:'Cormorant Garamond',serif;font-size:22pt;font-weight:600;line-height:1.15;color:var(--cream);margin-bottom:5mm}
+.end-big em{color:var(--goldl);font-style:italic}
+.end-rule{width:20mm;height:.8px;background:var(--gold);opacity:.4;margin:0 auto 5mm}
+.end-pq{font-family:'Cormorant Garamond',serif;font-size:9pt;font-style:italic;line-height:1.75;color:rgba(249,245,238,.5);max-width:320px;margin:0 auto 6mm;text-align:center}
+.end-cite{font-family:'Jost',sans-serif;font-size:5pt;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,168,76,.4)}
+
+/* ── BARRE NAV */
+.page-nav{position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(4,10,4,.97);backdrop-filter:blur(12px);border-top:1px solid rgba(201,168,76,.14);padding:.65rem 1.2rem;display:flex;align-items:center;justify-content:space-between;gap:.8rem}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:.68rem;font-weight:500;letter-spacing:.2em;color:var(--gold);white-space:nowrap}
+.nav-mods{display:flex;gap:.28rem;align-items:center}
+.nm{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;font-family:'Cormorant Garamond',serif;font-size:.68rem;font-weight:700;text-decoration:none;background:rgba(255,255,255,.05);color:rgba(201,168,76,.42);border:1px solid rgba(201,168,76,.1);transition:all .2s;cursor:pointer}
+.nm:hover{background:rgba(201,168,76,.14);color:var(--gold)}
+.nm.cur{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.nav-r{font-family:'Jost',sans-serif;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,168,76,.28);white-space:nowrap}
+
+/* ── PRINT */
+  .page-nav{display:none}
+  .book{padding:0;max-width:none}
+  .page{width:148mm;min-height:210mm;margin:0;box-shadow:none;page-break-after:always}
+  .page:last-child{page-break-after:avoid}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+}
+@page{size:A5;margin:0}
+@media(max-width:600px){.page{width:100%;min-height:auto}.book{padding:.8rem .4rem 5.5rem}}
+
+.page-cover{background:linear-gradient(168deg,#280450 0%,#1a0230 55%,#0e0118 100%)!important}
+.page-cover .cov-light{background:radial-gradient(ellipse 65% 50% at 50% 42%,rgba(110,20,180,.32) 0%,transparent 70%)!important}
+.page-d{background:#1a0230!important}
+/* ul.il — contraste renforcé */
+ul.il li{font-family:'Jost',sans-serif;font-size:7.5pt;line-height:1.7;color:var(--ink)!important}
+ul.il li strong{color:var(--ink)!important;font-weight:600}
+/* ul.il sur fond sombre */
+.page-d ul.il li{color:rgba(249,245,238,.80)!important;border-bottom-color:rgba(255,255,255,.12)!important}
+.page-d ul.il li:first-child{border-top-color:rgba(255,255,255,.12)!important}
+.page-d ul.il li::before{background:var(--gold)!important}
+.page-d ul.il li strong{color:rgba(255,255,255,.95)!important}
+/* Responsive screen */
+@media print {
+  .page { zoom: 1 !important; transform: none !important; width: 148mm !important; font-size: inherit !important; }
+  .book { max-width: none !important; padding: 0 !important; }
+  body { background: white !important; }
+}
+
+
+/* ═══ RESPONSIVE SCREEN ═══ */
+@media screen {
+  body {
+    background: #ede9e0 !important;
+  }
+  .book {
+    max-width: none;
+    padding: 2rem 0 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ede9e0;
+  }
+  .page {
+    width: min(600px, 95vw) !important;
+    zoom: 1 !important;
+    transform: none !important;
+    font-size: 10.5pt;
+    box-shadow: 0 2px 24px rgba(0,0,0,.18);
+    margin-bottom: 12px;
+  }
+  .page-c {
+    background: var(--cream) !important;
+  }
+  .page-nav {
+    zoom: 1 !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+@media print {
+  body { background: white !important; }
+  .book { max-width: none !important; padding: 0 !important; background: white !important; }
+  .page { zoom: 1 !important; transform: none !important; width: 148mm !important; font-size: inherit !important; box-shadow: none !important; margin-bottom: 0 !important; }
+}
+
+</style>
+</head>
+<body>
+<div class="book">
+<div class="page page-cover" id="cover">
+<div class="cov-vignette"></div><div class="cov-light"></div>
+<div class="cov-rl-t"></div><div class="cov-rl-b"></div>
+<div class="cov-inner">
+  <div class="cov-head"><span class="cov-col">Collection des 7 Masques · Édition finale</span><span class="cov-logo">V.A.L.E.U.R©</span></div>
+  <div class="cov-body">
+    <span class="cov-vol">Volume VII · Workbook complet · 12 semaines</span>
+    <span class="cov-ml">Masque</span>
+    <span class="cov-mn">Violet</span>
+    <div class="cov-rule"></div>
+    <span class="cov-fl">Peur fondatrice</span>
+    <span class="cov-fear">La peur de perdre son identité<br>— l'angoisse du faux self</span>
+    <span class="cov-q">«&nbsp;Je joue si bien tous les rôles<br>que j'ai fini par oublier<br>lequel était moi.&nbsp;»</span>
+  </div>
+  <div class="cov-foot">
+    <div class="cov-auth"><strong>Céline Bourbon</strong>Psychologue<br><em>De la peur à la joie d'être soi · L'Harmattan</em></div>
+    <div class="cov-wk"><span class="cov-wn">12</span><span class="cov-wl">semaines</span></div>
+  </div>
+</div></div><div class="page page-c" style="justify-content:center">
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:5mm">
+  <div class="cpbox"><p><strong>© Céline Bourbon — Méthode V.A.L.E.U.R©</strong><br>Tous droits réservés.<br><br>Ce livret est strictement réservé à un usage personnel.<br>Toute reproduction, diffusion ou transmission est interdite<br>sans autorisation écrite de l'auteure.<br><br>Ce workbook accompagne la méthode V.A.L.E.U.R©.<br>Il ne remplace pas un suivi professionnel.</p></div>
+  <div style="text-align:center">
+    <p style="font-family:'Cormorant Garamond',serif;font-size:9pt;font-style:italic;color:var(--inkl);line-height:1.7;margin-bottom:3mm">Fondements du Masque Violet — le masque des masques</p>
+    <div style="display:flex;flex-wrap:wrap;gap:2mm;justify-content:center"><span style="font-family:Jost,sans-serif;font-size:6pt;letter-spacing:.15em;text-transform:uppercase;color:var(--inkf);border:.4px solid var(--creamd);padding:.2em .6em">Faux Self · Winnicott 1960</span><span style="font-family:Jost,sans-serif;font-size:6pt;letter-spacing:.15em;text-transform:uppercase;color:var(--inkf);border:.4px solid var(--creamd);padding:.2em .6em">Théorie de l'identité · Erikson</span><span style="font-family:Jost,sans-serif;font-size:6pt;letter-spacing:.15em;text-transform:uppercase;color:var(--inkf);border:.4px solid var(--creamd);padding:.2em .6em">Thérapie ACT</span><span style="font-family:Jost,sans-serif;font-size:6pt;letter-spacing:.15em;text-transform:uppercase;color:var(--inkf);border:.4px solid var(--creamd);padding:.2em .6em">ECR-R · Attachement</span><span style="font-family:Jost,sans-serif;font-size:6pt;letter-spacing:.15em;text-transform:uppercase;color:var(--inkf);border:.4px solid var(--creamd);padding:.2em .6em">Tous les 7 masques conjugués</span><span style="font-family:Jost,sans-serif;font-size:6pt;letter-spacing:.15em;text-transform:uppercase;color:var(--inkf);border:.4px solid var(--creamd);padding:.2em .6em">Céline Bourbon 2024</span></div>
+  </div>
+</div></div><div class="page page-c" id="intro">
+<div class="pg-hd"><span class="pg-ch">Masque Violet · Introduction</span><span class="pg-nb">1</span></div>
+<span class="tag">Un mot pour vous</span>
+<h1 style="font-size:16pt;margin-bottom:3.5mm">Introduction</h1>
+<div class="rule-g"></div>
+<p class="body" style="font-family:'Cormorant Garamond',serif;font-size:10pt;font-weight:500;font-style:italic;color:var(--ink);margin-bottom:3.5mm">Cher·e lecteur·ice,</p>
+<p class="body">Ce livret est différent de tous les autres. Parce que le Masque Violet est différent de tous les autres masques.</p>
+<p class="body">Les six masques précédents répondent chacun à une peur précise — le rejet, la mort, la souffrance, l'inconnu, l'impuissance, l'échec. Le Masque Violet, lui, <strong>les tient tous ensemble</strong>. Il est la synthèse de tout ce que vous avez construit pour ne pas être vous-même. La forteresse finale. Le chef d'orchestre invisible de vos défenses.</p>
+<p class="body">Winnicott l'a appelé le <strong>Faux Self</strong>&nbsp;: cette persona sophistiquée que nous développons quand nous apprenons, très tôt, que notre vraie nature n'est pas sûre — pas assez aimable, pas assez forte, pas assez conforme à ce qu'on attend de nous. Alors nous construisons un personnage. Et nous le jouons si bien, si longtemps, que nous finissons par oublier que c'était un rôle.</p>
+<div class="pq"><p>«&nbsp;Il cristallise toutes ces fois où vous n'avez pas pu vous choisir. Plus vous vous êtes conformé aux attentes, plus a grandi cette mélancolie de l'âme. Vous êtes devenu étranger à vous-même.&nbsp;»</p><cite>Céline Bourbon — De la peur à la joie d'être soi · L'Harmattan</cite></div>
+<p class="body">Ce livret ne va pas vous apprendre à «&nbsp;trouver qui vous êtes&nbsp;». Il va vous apprendre à <strong>enlever progressivement ce qui n'est pas vous</strong> — couche après couche — jusqu'à retrouver ce qui a toujours été là, en dessous.</p>
+<p style="font-family:'Cormorant Garamond',serif;font-size:9pt;font-style:italic;color:var(--inkl);line-height:1.7;margin-top:3mm">Avec toute ma bienveillance — et tout mon respect pour ce chemin,<br><strong style="font-style:normal;font-weight:600;color:var(--ink);display:block;margin-top:1mm">Céline Bourbon</strong>Psychologue · Auteure de <em>De la peur à la joie d'être soi</em> · Éditions L'Harmattan</p>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 act">0</div><div class="pl ">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Masque Violet · Mode d'emploi</span><span class="pg-nb">2</span></div>
+<span class="tag">Votre guide</span>
+<h1 style="font-size:16pt;margin-bottom:2mm">Mode d'emploi</h1>
+<p class="sub">Ce parcours est le plus profond de la collection. Il mérite une attention particulière.</p>
+<div class="rule-g"></div>
+<div class="gi"><div class="gi-ico">⏱</div><div><div class="gi-t">Régularité plutôt qu'intensité</div><div class="gi-b">15 minutes quotidiennes valent mieux que 2 heures par semaine. L'identité se reconstruit dans la durée — pas dans les grands soirs.</div></div></div>
+<div class="gi"><div class="gi-ico">↻</div><div><div class="gi-t">Ne sautez pas d'étape</div><div class="gi-b">Chaque module prépare le suivant. Ici plus qu'ailleurs, l'ordre est essentiel — on ne peut pas unifier ce qu'on n'a pas encore exploré.</div></div></div>
+<div class="gi"><div class="gi-ico">✍</div><div><div class="gi-t">Écrivez sans vous surveiller</div><div class="gi-b">Le Masque Violet surveille constamment l'image qu'il projette — même dans un carnet privé. Remarquez cette surveillance. Puis écrivez quand même.</div></div></div>
+<div class="gi"><div class="gi-ico">♡</div><div><div class="gi-t">Si une page vous déstabilise profondément</div><div class="gi-b">C'est normal. Le travail sur l'identité peut générer un vertige temporaire. Ce vertige est le signe que quelque chose de figé commence à bouger. Respirez. Revenez.</div></div></div>
+<div class="gi"><div class="gi-ico">💜</div><div><div class="gi-t">Note importante pour le Masque Violet</div><div class="gi-b">Si vous avez travaillé sur d'autres masques, les effets de ce livret s'additionneront. Si c'est votre premier livret, sachez qu'il contient tous les autres. Prenez le temps qu'il faut.</div></div></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 act">0</div><div class="pl ">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Masque Violet · Sommaire</span><span class="pg-nb">3</span></div>
+<span class="tag">Plan du parcours</span>
+<h1 style="font-size:16pt;margin-bottom:2mm">12 semaines de transformation</h1>
+<div class="rule-g" style="margin-bottom:4mm"></div>
+<div class="sr"><div class="srl0">0</div><div class="sri"><span class="srn">Comprendre — Fondations</span><span class="srd">Le Faux Self · Les 7 peurs conjuguées · Origines · Formule D=e×r²</span></div><span class="srw">Fondations</span></div>
+<div class="sr"><div class="srl">V</div><div class="sri"><span class="srn">Voir — Reconnaître le faux self en action</span><span class="srd">L'Observateur profond · Cycle Violet · Les rôles et masques</span></div><span class="srw">Sem. 1–2</span></div>
+<div class="sr"><div class="srl">A</div><div class="sri"><span class="srn">Accueillir — Le vertige de l'identité</span><span class="srd">Recevoir la dissolution sans fuir · Protocole en 4 temps</span></div><span class="srw">Sem. 3–4</span></div>
+<div class="sr"><div class="srl">L</div><div class="sri"><span class="srn">Localiser — Le corps du faux self</span><span class="srd">La dissociation corporelle · Body Scan existentiel</span></div><span class="srw">Sem. 5–6</span></div>
+<div class="sr"><div class="srl">E</div><div class="sri"><span class="srn">Explorer — Ce que le faux self protège</span><span class="srd">Les 7 couches · Le Vrai Self · Valeurs profondes</span></div><span class="srw">Sem. 7–8</span></div>
+<div class="sr"><div class="srl">U</div><div class="sri"><span class="srn">Unifier — La réconciliation finale</span><span class="srd">«&nbsp;Je suis plus que mes masques&nbsp;» · Lettre au Faux Self</span></div><span class="srw">Sem. 9–10</span></div>
+<div class="sr"><div class="srl">R</div><div class="sri"><span class="srn">Renforcer — Vivre depuis le Vrai Self</span><span class="srd">16 défis de dissolution identitaire · Lettre au soi futur</span></div><span class="srw">Sem. 11–12</span></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 act">0</div><div class="pl ">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-d" id="mod0">
+<div class="page-d-bg">0</div>
+<div class="pg-hd-d"><span class="pg-ch-d">Masque Violet · Module 0</span><span class="pg-nb-d">4</span></div>
+<span class="tag-g">Module 0 · Fondations</span>
+<h1 class="lh" style="font-size:19pt;margin-bottom:2mm">Avant de commencer</h1>
+<p class="sub lh">Le Faux Self · Les 7 peurs conjuguées · Origines</p>
+<div class="rule-gl"></div>
+<p class="body lh">Ce module est différent. Il ne parle pas d'une peur — il parle de toutes les peurs à la fois. Il parle de la construction du personnage que vous êtes devenu pour survivre — et du chemin pour retrouver celui que vous êtes.</p>
+<ul class="il" style="margin-top:2mm">
+<li>Le Faux Self — Winnicott et la construction du personnage de survie</li>
+<li>Les 7 peurs conjuguées — comment elles forment une prison identitaire</li>
+<li>La formule D = e × r² — la résistance à soi-même comme source d'épuisement</li>
+<li>Les origines du Faux Self — quand être soi est devenu dangereux</li>
+<li>Questionnaire initial et acte d'engagement</li>
+</ul>
+<div class="pg-ft-d"><span class="pg-ft-td">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 act">0</div><div class="pl ">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 0 · Le Faux Self</span><span class="pg-nb">5</span></div>
+<span class="tag">Ce qui se passe quand on n'est plus soi</span>
+<h2>Le Faux Self —<br>la construction du personnage de survie</h2>
+<div class="rule-g"></div>
+<h3>Winnicott, 1960 — La découverte clinique</h3>
+<p class="body">Le pédopsychiatre Donald Winnicott a identifié ce qu'il appelle le <strong>Faux Self</strong>&nbsp;: une structure psychique qui se développe quand l'environnement précoce n'a pas pu accueillir le Vrai Self de l'enfant — ses besoins, ses émotions, sa spontanéité. L'enfant apprend alors à construire un personnage adapté aux attentes — souriant, conforme, performant. Ce personnage fonctionne très bien dans le monde. Mais il est épuisant à maintenir. Et il coupe son porteur de sa propre vie intérieure.</p>
+<h3>Le cerveau qui s'oublie</h3>
+<p class="body">Neurobiologiquement, vivre depuis un Faux Self génère un état de <strong>dissonance cognitive chronique</strong>&nbsp;: ce que vous pensez, ressentez et dites ne s'aligne pas. Votre cerveau dépense une énergie considérable à gérer cet écart. La fatigue inexpliquée. La sensation d'être à côté de sa vie. Le sentiment que «&nbsp;quelque chose manque&nbsp;» sans pouvoir nommer quoi.</p>
+<div class="pq"><p>«&nbsp;Sous tous ces masques, il y a un Soi plus vaste, plus libre, plus vrai. Évoluer ne signifie pas me perdre — cela signifie me retrouver.&nbsp;»</p><cite>Céline Bourbon — De la peur à la joie d'être soi · L'Harmattan</cite></div>
+<p class="exo-q">Ce que cette page m'apprend sur moi&nbsp;:</p>
+<textarea class="wta" rows="3" placeholder="Ce que je reconnais dans ce mécanisme..."></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 act">0</div><div class="pl ">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 0 · Les 7 peurs conjuguées</span><span class="pg-nb">6</span></div>
+<span class="tag">Ce que le Masque Violet porte</span>
+<h2>Les 7 peurs conjuguées —<br>la prison identitaire complète</h2>
+<p class="sub">Le Masque Violet ne répond pas à une peur isolée. Il les mobilise toutes.</p>
+<div class="rule-g"></div>
+<p class="body">Chaque fois que vous êtes sur le point d'être vraiment vous-même, votre Masque Violet mobilise simultanément tous vos autres masques pour vous en empêcher&nbsp;:</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2mm;margin:3mm 0">
+<span style="font-family:Jost,sans-serif;font-size:6pt;padding:.2em .7em;border:.4px solid #a0303055;background:#a0303012;color:#a03030;border-radius:1px">Rouge — «&nbsp;Et si être moi déclenchait quelque chose de grave ?&nbsp;»</span>
+<span style="font-family:Jost,sans-serif;font-size:6pt;padding:.2em .7em;border:.4px solid #c4680055;background:#c4680012;color:#c46800;border-radius:1px">Orange — «&nbsp;Et si être moi faisait trop souffrir ?&nbsp;»</span>
+<span style="font-family:Jost,sans-serif;font-size:6pt;padding:.2em .7em;border:.4px solid #c4aa0055;background:#c4aa0012;color:#c4aa00;border-radius:1px">Jaune — «&nbsp;Et si être moi créait de l'imprévu incontrôlable ?&nbsp;»</span>
+<span style="font-family:Jost,sans-serif;font-size:6pt;padding:.2em .7em;border:.4px solid #3d8a4255;background:#3d8a4212;color:#3d8a42;border-radius:1px">Vert — «&nbsp;Et si être moi me faisait rejeter ?&nbsp;»</span>
+<span style="font-family:Jost,sans-serif;font-size:6pt;padding:.2em .7em;border:.4px solid #2e72d855;background:#2e72d812;color:#2e72d8;border-radius:1px">Bleu — «&nbsp;Et si être moi me faisait perdre le contrôle ?&nbsp;»</span>
+<span style="font-family:Jost,sans-serif;font-size:6pt;padding:.2em .7em;border:.4px solid #4a40d855;background:#4a40d812;color:#4a40d8;border-radius:1px">Indigo — «&nbsp;Et si être moi révélait mon insuffisance ?&nbsp;»</span>
+<span style="font-family:Jost,sans-serif;font-size:6pt;padding:.2em .7em;border:.4px solid #9030d055;background:#9030d012;color:#9030d0;border-radius:1px;grid-column:span 2;text-align:center">Violet — «&nbsp;Et si être moi signifiait perdre qui je crois être ?&nbsp;»</span>
+</div>
+<p class="body" style="font-size:7.5pt;font-style:italic;color:var(--inkl)">Résultat&nbsp;: être soi-même semble le risque le plus grand de tous. Alors vous restez dans le personnage. Vous ajoutez une couche. Et une autre.</p>
+<p class="exo-q">Lequel de ces «&nbsp;et si...&nbsp;» résonne le plus fort en vous&nbsp;?</p>
+<textarea class="wta" rows="2" placeholder="La peur conjuguée qui revient le plus souvent quand j'envisage d'être vraiment moi..."></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 act">0</div><div class="pl ">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 0 · Formule D=e×r²</span><span class="pg-nb">7</span></div>
+<span class="tag">La formule de la souffrance</span>
+<h2 style="font-size:18pt;letter-spacing:-.01em">D = e × r²</h2>
+<p class="sub">Ce n'est pas le fait d'être soi qui épuise — c'est la résistance à être soi</p>
+<div class="rule-g"></div>
+<p class="body">Maintenir un Faux Self demande une énergie colossale. Ce n'est pas d'être vous-même qui vous épuise. C'est le <strong>combat permanent contre votre propre nature</strong> — la surveillance constante de l'image, la calibration incessante des réponses, la répression quotidienne de ce qui cherche à s'exprimer. Parce que la résistance est au carré, doubler vos efforts de conformité multiplie par <strong>4</strong> la durée de l'épuisement existentiel.</p>
+<div style="display:flex;gap:4mm;margin:3.5mm 0">
+<div style="flex:1;padding:3mm;border:.5px solid var(--creamd);text-align:center;background:rgba(201,168,76,.04)"><span style="font-family:'Cormorant Garamond',serif;font-size:18pt;font-weight:300;color:var(--gold);display:block;line-height:1.1">D</span><span style="font-family:'Jost',sans-serif;font-size:5.5pt;letter-spacing:.15em;text-transform:uppercase;color:var(--inkf)">Durée épuisement identitaire</span></div>
+<div style="flex:1;padding:3mm;border:.5px solid var(--creamd);text-align:center"><span style="font-family:'Cormorant Garamond',serif;font-size:18pt;font-weight:300;color:var(--inkl);display:block;line-height:1.1">e</span><span style="font-family:'Jost',sans-serif;font-size:5.5pt;letter-spacing:.15em;text-transform:uppercase;color:var(--inkf)">Peur de dissolution initiale</span></div>
+<div style="flex:1;padding:3mm;border:.5px solid #9030d0;background:rgba(14,1,24,.03);text-align:center"><span style="font-family:'Cormorant Garamond',serif;font-size:18pt;font-weight:300;color:#9030d0;display:block;line-height:1.1">r²</span><span style="font-family:'Jost',sans-serif;font-size:5.5pt;letter-spacing:.15em;text-transform:uppercase;color:var(--inkf)">Résistance à être soi (au carré)</span></div>
+</div>
+<div style="background:rgba(201,168,76,.06);border:.5px solid rgba(201,168,76,.2);padding:3mm 4mm;margin-bottom:3mm">
+<p style="font-family:'Jost',sans-serif;font-size:7pt;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5mm">Résistances typiques — Masque Violet</p>
+<ul class="il">
+<li>Conformisme chronique — s'adapter à chaque contexte en perdant sa propre couleur</li>
+<li>Évitement de toute situation qui révèle le Vrai Self — refus des transformations</li>
+<li>Attachement rigide aux rôles — «&nbsp;je suis quelqu'un qui...&nbsp;» comme bouclier</li>
+<li>Mélancolie inexplicable — le manque de soi que l'on ne sait pas nommer</li>
+<li>Hostilité envers ceux qui semblent être vraiment eux-mêmes</li>
+</ul>
+</div>
+<div style="background:rgba(0,0,0,.03);border:.5px solid var(--creamd);padding:3mm 4mm;margin-bottom:2.5mm">
+<p style="font-family:'Jost',sans-serif;font-size:6.5pt;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--inkl);margin-bottom:1.5mm">L'outil de base — Cohérence cardiaque 365</p>
+<p class="body" style="margin-bottom:0"><strong>3 fois par jour · 6 cycles/min · 5 minutes</strong> · Inspiration 5 sec — Expiration 5 sec. En 21 jours, réduit physiologiquement la réponse d'anxiété chronique — et crée un espace intérieur où le Vrai Self peut commencer à respirer.</p>
+</div>
+<p class="exo-q">Ma résistance principale à être moi-même&nbsp;:</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder="Ce que je fais habituellement pour rester dans le personnage..."></div><div class="wline"><input type="text" placeholder=""></div></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 act">0</div><div class="pl ">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 0 · Portrait Masque Violet</span><span class="pg-nb">8</span></div>
+<span class="tag">Anatomie du Masque Violet</span>
+<h2>Votre masque dominant</h2>
+<p class="sub">La synthèse de tous les compromis — et la promesse de leur dépassement</p>
+<div class="rule-g"></div>
+<p class="body">Votre masque s'est construit autour d'une conviction gravée très tôt&nbsp;: <strong>«&nbsp;Ce que je suis vraiment n'est pas acceptable. Pour être aimé·e, pour être en sécurité, pour être à la hauteur — je dois être quelqu'un d'autre.&nbsp;»</strong> Cette conviction a développé chez vous une capacité d'adaptation extraordinaire — et une fatigue existentielle profonde.</p>
+<p class="body" style="font-size:7.5pt;font-style:italic;color:var(--inkl)">Dans sa lumière, ce masque révèle une adaptabilité et une profondeur humaine exceptionnelles — qui, libérées de la contrainte de conformité, deviennent une source d'expression authentique et de connexion vraie.</p>
+<h3 style="margin-top:2mm">Vous reconnaissez-vous ? — Cochez ce qui résonne</h3>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl">Vous avez souvent l'impression d'être plusieurs personnes selon le contexte — et vous ne savez plus laquelle est «&nbsp;la vraie&nbsp;»</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl">Vous ressentez une mélancolie diffuse, un sentiment que vous passez à côté de votre propre vie</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl">Quand quelqu'un vous dit que vous avez «&nbsp;changé&nbsp;», vous ressentez une anxiété disproportionnée</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl">Vous avez du mal à répondre à la question «&nbsp;qui es-tu vraiment&nbsp;?&nbsp;» — non par modestie, mais par véritable confusion</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl">Vous vous conformez automatiquement aux attentes sans vous demander si elles sont les vôtres</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl">Il y a des aspects de vous-même que vous n'avez jamais osé montrer à personne</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl">Parfois, une activité d'enfance, une musique, un lieu réveille quelque chose que vous ne savez pas nommer — un soi plus ancien, plus vrai</span></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 act">0</div><div class="pl ">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 0 · Origines du Faux Self</span><span class="pg-nb">9</span></div>
+<span class="tag">Comment le personnage s'est construit</span>
+<h2>La naissance du faux self</h2>
+<p class="sub">Ce n'est pas une faiblesse — c'est une intelligence de survie</p>
+<div class="rule-g"></div>
+<p class="body">Le Faux Self ne naît pas de la malveillance de l'environnement. Il naît de la <strong>nécessité d'adaptation</strong> — face à des attentes impossibles à satisfaire, une atmosphère où certaines émotions n'avaient pas droit de cité, des messages répétés sur ce qu'il «&nbsp;faut&nbsp;» être pour mériter sa place.</p>
+<div class="g2">
+<div class="gcell"><span class="gc-lbl">Le «&nbsp;bon enfant&nbsp;» de la famille</span><span class="gc-txt">Emma a appris très tôt que sa valeur dépendait de sa capacité à ne pas déranger. Elle est devenue l'enfant parfaite — discrète, performante, sans besoins. À 40 ans, elle ne sait plus quels sont ses désirs réels.</span></div>
+<div class="gcell"><span class="gc-lbl">L'adaptation aux rôles contradictoires</span><span class="gc-txt">Karim était le «&nbsp;fort&nbsp;» pour sa famille, le «&nbsp;drôle&nbsp;» pour ses amis, le «&nbsp;sérieux&nbsp;» au travail. Il a joué tous ces rôles si bien qu'il a perdu le fil de celui qui les jouait.</span></div>
+</div>
+<div class="gcell" style="margin-bottom:3mm"><span class="gc-lbl">Le traumatisme de la non-conformité</span><span class="gc-txt">À 8 ans, Sofia a montré quelque chose de sa vraie nature — une passion, une émotion, une différence — et a été moquée, rejetée ou ignorée. Son cerveau a gravé&nbsp;: être vraiment soi est dangereux. Elle a construit un personnage plus acceptable. Elle le porte encore.</span></div>
+<p class="exo-q">Ce que ce portrait réveille en moi&nbsp;:</p>
+<textarea class="wta" rows="3" placeholder="Le moment ou le contexte où j'ai commencé à jouer un rôle plutôt qu'être moi..."></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 act">0</div><div class="pl ">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 0 · Questionnaire initial</span><span class="pg-nb">10</span></div>
+<span class="tag">Évaluation initiale</span>
+<h2>Votre point de départ</h2>
+<p class="sub">À relire dans 12 semaines. Répondez depuis vous-même — pas depuis le personnage.</p>
+<div class="rule-g"></div>
+<p class="exo-q" style="font-style:normal;font-family:'Jost',sans-serif;font-size:7.5pt;color:var(--inkm);margin-bottom:2mm"><strong>1.</strong> De 0 à 10, à quel point sentez-vous que vous vivez depuis un personnage construit plutôt que depuis votre vraie nature&nbsp;?</p>
+<div class="scale"><span class="scale-l">0</span><div class="scale-dots"><div class="sd" onclick="selDot(this)">0</div><div class="sd" onclick="selDot(this)">1</div><div class="sd" onclick="selDot(this)">2</div><div class="sd" onclick="selDot(this)">3</div><div class="sd" onclick="selDot(this)">4</div><div class="sd" onclick="selDot(this)">5</div><div class="sd" onclick="selDot(this)">6</div><div class="sd" onclick="selDot(this)">7</div><div class="sd" onclick="selDot(this)">8</div><div class="sd" onclick="selDot(this)">9</div><div class="sd" onclick="selDot(this)">10</div></div><span class="scale-l">10</span></div>
+<p class="exo-q"><strong>2.</strong> Qu'est-ce qui vous a amené·e à ouvrir ce livret aujourd'hui&nbsp;?</p>
+<textarea class="wta" rows="2" placeholder="Soyez honnête — même si la réponse vous surprend..."></textarea>
+<p class="exo-q"><strong>3.</strong> Dans quel contexte vous sentez-vous le plus «&nbsp;vous-même&nbsp;» — et dans quel contexte vous sentez-vous le plus faux·sse&nbsp;?</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder=""></div><div class="wline"><input type="text" placeholder=""></div></div>
+<p class="exo-q"><strong>4.</strong> Y a-t-il quelque chose en vous que vous n'avez jamais osé montrer à personne — une passion, un désir, une dimension de vous-même&nbsp;?</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder=""></div><div class="wline"><input type="text" placeholder=""></div></div>
+<p class="exo-q"><strong>5.</strong> En une phrase&nbsp;: qui seriez-vous si personne ne regardait — si personne ne jugeait, n'attendait, n'avait besoin de vous d'une certaine façon&nbsp;?</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder=""></div><div class="wline"><input type="text" placeholder=""></div></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 act">0</div><div class="pl ">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 0 · Engagement</span><span class="pg-nb">11</span></div>
+<span class="tag">Avant de commencer</span>
+<h2>Mon acte d'engagement</h2>
+<p class="sub">Le plus courageux de tous les engagements — se choisir.</p>
+<div class="rule-g"></div>
+<div style="border:.5px solid var(--creamd);padding:4mm 5mm;margin-bottom:4mm;background:rgba(14,1,24,.03)">
+<p class="body" style="line-height:2">
+Je m'engage à traverser ces 12 semaines avec honnêteté envers moi-même.<br>
+Je m'engage à écrire depuis moi — pas depuis le personnage que j'ai construit.<br>
+Je m'engage à traiter avec bienveillance toutes les parts de moi — même celles que j'ai longtemps cachées.<br>
+Je m'engage à retrouver progressivement ce que j'ai été avant de décider qui je devais être.
+</p>
+</div>
+<div class="g2" style="margin-bottom:3mm">
+<div class="gcell"><span class="gc-lbl">Signé le</span><div class="wlines"><div class="wline"><input type="text" placeholder=""></div></div></div>
+<div class="gcell"><span class="gc-lbl">Mon prénom — le vrai</span><div class="wlines"><div class="wline"><input type="text" placeholder=""></div></div></div>
+</div>
+<p class="exo-q">Mes 3 intentions pour ces 12 semaines&nbsp;:</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder="Mon intention..."></div><div class="wline"><input type="text" placeholder=""></div><div class="wline"><input type="text" placeholder=""></div></div>
+<div class="pq" style="margin-top:3mm"><p>«&nbsp;En apprenant progressivement à lâcher prise sur ces constructions rigides, l'énergie peut se réorienter vers une expression plus spontanée de qui nous sommes. C'est la résurrection de nos élans intérieurs.&nbsp;»</p><cite>Céline Bourbon — De la peur à la joie d'être soi · L'Harmattan</cite></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 act">0</div><div class="pl ">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-d" id="mod1">
+<div class="page-d-bg">V</div>
+<div class="pg-hd-d"><span class="pg-ch-d">Masque Violet · Module 1</span><span class="pg-nb-d">12</span></div>
+<span class="tag-g">Étape 1 · Semaines 1 &amp; 2</span>
+<h1 class="lh" style="font-size:22pt;margin-bottom:1mm">VOIR</h1>
+<p class="sub lh">«&nbsp;Je vois ce qui m'active.&nbsp;»</p>
+<div class="rule-gl"></div>
+<p class="body lh">La conscience observatrice · Reconnaître le faux self en action<br>Le cycle invisible du Masque Violet · Les rôles comme déclencheurs<br>Les 3 questions · L'exercice du témoin identitaire</p>
+<div class="pg-ft-d"><span class="pg-ft-td">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl act">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 1 · VOIR — Fondation</span><span class="pg-nb">13</span></div>
+<span class="tag">L'Observateur — la clé de tout</span>
+<h2>Si vous pouvez observer le personnage,<br>vous n'êtes pas ce personnage</h2>
+<div class="rule-g"></div>
+<p class="body">Vous pouvez dire&nbsp;: «&nbsp;je joue le rôle de la personne forte.&nbsp;» Mais <em>qui dit ça</em>&nbsp;? C'est une part de vous qui <em>observe</em> le rôle. Cette conscience qui voit — c'est votre <strong>Vrai Self en train d'émerger</strong>. Car si vous étiez entièrement le personnage, vous ne pourriez pas l'observer.</p>
+<p class="body">VOIR, pour le Masque Violet, c'est l'acte le plus révolutionnaire possible&nbsp;: <strong>prendre conscience que vous jouez un rôle</strong> — et qu'il y a quelqu'un derrière ce rôle qui a toujours existé.</p>
+<div class="pq"><p>«&nbsp;Si vous pouvez observer un problème, c'est qu'il y a une part de vous qui le remarque — et cette part-là n'est pas le problème. Elle est la solution.&nbsp;»</p><cite>Céline Bourbon — De la peur à la joie d'être soi</cite></div>
+<div class="g2">
+<div class="gcell"><span class="gc-lbl" style="color:#9030d0">L'Observateur — votre Vrai Self</span><span class="gc-txt">La conscience stable qui peut voir les rôles sans en être prisonnière. Elle ne joue pas. Elle regarde. Elle a toujours été là — sous les couches du personnage.</span></div>
+<div class="gcell"><span class="gc-lbl" style="color:var(--inkl)">L'Observé — le Faux Self</span><span class="gc-txt">Les rôles, les masques, les adaptations automatiques, les réponses calibrées. Ce que vous avez construit pour survivre — et qui vous coûte si cher.</span></div>
+</div>
+<p class="exo-q">Un rôle que je joue souvent — et qui l'observe&nbsp;?</p>
+<textarea class="wta" rows="3" placeholder="Dans [ce contexte], je joue le rôle de... Une part de moi observe que..."></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl act">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 1 · Exercice fondateur</span><span class="pg-nb">14</span></div>
+<span class="tag">Exercice guidé</span>
+<h2>L'inventaire des rôles</h2>
+<p class="sub">Voir tous les personnages — avant de rencontrer celui qui les regarde</p>
+<div class="rule-g"></div>
+<h3>Partie 1 — L'inventaire</h3>
+<p class="body" style="font-size:7pt;color:var(--inkl);font-style:italic">Listez les différents rôles que vous jouez selon les contextes — au travail, en famille, avec les amis, en amour, en public, seul·e. Soyez honnête.</p>
+<p class="exo-q">Mes rôles selon les contextes&nbsp;:</p>
+<textarea class="wta" rows="3" placeholder="Au travail je suis... / En famille je suis... / Avec les amis... / Seul·e..."></textarea>
+<h3>Partie 2 — La question centrale</h3>
+<p class="body" style="font-size:7pt;color:var(--inkl);font-style:italic">Maintenant, lisez ce que vous venez d'écrire. Y a-t-il un fil rouge — quelque chose de constant dans tous ces rôles — quelque chose qui vous ressemble vraiment&nbsp;? Et y a-t-il des rôles qui vous semblent particulièrement «&nbsp;faux&nbsp;»&nbsp;?</p>
+<p class="exo-q">Ce qui se ressemble dans tous mes rôles — et ce qui semble le plus éloigné de moi&nbsp;:</p>
+<textarea class="wta" rows="3" placeholder="Le fil constant... / Le rôle le plus éloigné de moi..."></textarea>
+<div class="pq" style="margin-top:2mm"><p>«&nbsp;La question n'est pas&nbsp;: quel rôle dois-je jouer&nbsp;? La question est&nbsp;: qui joue tous ces rôles&nbsp;? Trouver celui-là — c'est le début du chemin.&nbsp;»</p><cite>Méthode V.A.L.E.U.R© — Céline Bourbon</cite></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl act">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 1 · Le cycle invisible du Masque Violet</span><span class="pg-nb">15</span></div>
+<span class="tag">Comment ça fonctionne</span>
+<h2>Le cycle invisible du Masque Violet</h2>
+<p class="sub">4 étapes — et où VOIR peut briser le cycle</p>
+<div class="rule-g"></div>
+<div class="step-n"><div class="step-nb">1</div><div class="step-b"><div class="step-t">Le déclencheur identitaire</div><div class="step-tx">Une remarque sur votre changement. Une situation qui exige d'être différent de votre rôle habituel. Une émotion, un désir, une pensée qui «&nbsp;ne vous ressemble pas&nbsp;». Un appel de votre vraie nature.</div></div></div>
+<div class="step-n"><div class="step-nb">2</div><div class="step-b"><div class="step-t">L'alarme du Faux Self</div><div class="step-tx">«&nbsp;Je vais perdre qui je suis.&nbsp;» «&nbsp;Si je change, les autres ne me reconnaîtront plus.&nbsp;» «&nbsp;Je dois retrouver mes habitudes.&nbsp;» Tous les 7 masques se mobilisent simultanément pour défendre le statu quo identitaire.</div></div></div>
+<div class="step-n"><div class="step-nb">3</div><div class="step-b"><div class="step-t">Le comportement de rigidité identitaire</div><div class="step-tx">Se raccrocher au rôle habituel. Rejeter ce qui dérange la cohérence du personnage. Éviter les situations nouvelles. Répéter les mêmes patterns — même épuisants — parce qu'ils sont connus.</div></div></div>
+<div class="step-n"><div class="step-nb" style="color:var(--gold)">4</div><div class="step-b"><div class="step-t" style="color:#9030d0">Votre liberté commence ici</div><div class="step-tx">La mélancolie de ne pas vivre sa vraie vie s'approfondit. L'écart entre soi et le personnage s'agrandit. Mais <strong>chaque fois que vous observez le cycle — vous êtes déjà en dehors de lui.</strong></div></div></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl act">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 1 · Les 3 questions</span><span class="pg-nb">16</span></div>
+<span class="tag">Outil quotidien</span>
+<h2>Les 3 questions de VOIR</h2>
+<p class="sub">Briser le cycle — même en plein milieu d'un rôle</p>
+<div class="rule-g"></div>
+<div class="step-n"><div class="step-nb">1</div><div class="step-b"><div class="step-t">Qu'est-ce que je suis en train de faire là&nbsp;?</div><div class="step-tx">Nommez le rôle en cours. Ex.&nbsp;: «&nbsp;Je suis en train de jouer le rôle de la personne qui n'a besoin de rien.&nbsp;» / «&nbsp;Je suis en train de me conformer à ce qu'on attend de moi.&nbsp;»</div></div></div>
+<div class="step-n"><div class="step-nb">2</div><div class="step-b"><div class="step-t">Quel masque est en train de parler&nbsp;?</div><div class="step-tx">Ex.&nbsp;: «&nbsp;Mon Masque Violet — peur de la perte d'identité — mobilise tous mes autres masques pour me maintenir dans ce rôle connu.&nbsp;»</div></div></div>
+<div class="step-n"><div class="step-nb">3</div><div class="step-b"><div class="step-t">Y a-t-il en moi une part qui observe cela&nbsp;?</div><div class="step-tx">Cherchez la part stable — votre Vrai Self. Elle peut voir le personnage sans en être prisonnière. Elle sait que vous êtes plus vaste que ce rôle.</div></div></div>
+<h3 style="margin-top:3mm">Mes déclencheurs — ce que je reconnais</h3>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl">Une remarque sur ma façon d'être — «&nbsp;tu as changé&nbsp;», «&nbsp;ça ne te ressemble pas&nbsp;»</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl">Une situation qui exige que je sorte de mon rôle habituel</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl">Quelqu'un qui vit librement depuis lui-même — ce qui réveille à la fois de l'admiration et de l'inconfort</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl">Une envie, un désir, une pensée que «&nbsp;ce n'est pas moi&nbsp;» de ressentir</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl">Un soudain sentiment de vide — «&nbsp;qu'est-ce que je fais vraiment de ma vie&nbsp;?&nbsp;»</span></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl act">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 1 · L'exercice du témoin identitaire</span><span class="pg-nb">17</span></div>
+<span class="tag">Exercice guidé</span>
+<h2>L'exercice du témoin identitaire</h2>
+<p class="sub">Observer votre faux self depuis la conscience de votre Vrai Self</p>
+<div class="rule-g"></div>
+<div class="step-n"><div class="step-nb">1</div><div class="step-b"><div class="step-t">Choisissez une scène récente</div><div class="step-tx">Un moment récent où vous avez joué un rôle qui ne vous semblait pas vraiment vous. Un épisode ordinaire.</div></div></div>
+<div class="step-n"><div class="step-nb">2</div><div class="step-b"><div class="step-t">Revoyez la scène</div><div class="step-tx">Le déclencheur arrive. Le Faux Self prend les commandes. Le comportement calibré s'enclenche. Regardez sans modifier.</div></div></div>
+<div class="step-n"><div class="step-nb">3</div><div class="step-b"><div class="step-t">Installez-vous dans la conscience témoin</div><div class="step-tx">Pas au fond d'une salle de cinéma cette fois — mais dans la conscience la plus paisible et la plus vaste que vous pouvez trouver en vous. Celle qui peut tout regarder sans craindre de se perdre.</div></div></div>
+<div class="step-n"><div class="step-nb">4</div><div class="step-b"><div class="step-t">Les 3 questions depuis la conscience témoin</div><div class="step-tx">Quel rôle mon Faux Self jouait-il&nbsp;? — Quelle peur le maintenait dans ce rôle&nbsp;? — Y a-t-il en moi une part qui n'a jamais eu besoin de ce rôle pour exister&nbsp;?</div></div></div>
+<p class="exo-q">Ce que j'ai observé depuis la conscience témoin&nbsp;:</p>
+<textarea class="wta" rows="4" placeholder="Le rôle était... La peur derrière était... Ce que j'observe de plus profond en moi..."></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl act">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 1 · Journal semaines 1–2</span><span class="pg-nb">18</span></div>
+<span class="tag">Journal de bord</span>
+<h2>Semaines 1–2 — Observations</h2>
+<p class="sub">Chaque soir, 5 minutes — un rôle joué, un moment de Vrai Self aperçu</p>
+<div class="rule-g"></div>
+<table class="jtable">
+<tr><th>Jour</th><th>Rôle joué</th><th>La peur derrière</th><th>Moment de Vrai Self&nbsp;?</th></tr>
+<tr><td><input type='text' placeholder='Lundi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Mardi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Mercredi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Jeudi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Vendredi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Samedi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Dimanche'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+</table>
+<p class="exo-q">Y a-t-il eu un moment — même bref — où j'ai senti quelque chose de vrai en moi pointer le bout de son nez&nbsp;?</p>
+<textarea class="wta" rows="3" placeholder=""></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl act">V</div><div class="pl ">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 1 · Bilan VOIR</span><span class="pg-nb">19</span></div>
+<span class="tag">Bilan</span>
+<h2>Bilan des 2 semaines</h2>
+<p class="sub">Avant de passer à ACCUEILLIR</p>
+<div class="rule-g"></div>
+<p class="exo-q"><strong>Question 1</strong> — Un moment où j'ai vu le Faux Self en action — et où il y avait quelque chose derrière lui que j'ai entrevu&nbsp;:</p>
+<textarea class="wta" rows="3" placeholder="Ce moment — même infime..."></textarea>
+<p class="exo-q"><strong>Question 2</strong> — Quel rôle me coûte le plus d'énergie à maintenir&nbsp;?</p>
+<textarea class="wta" rows="3" placeholder=""></textarea>
+<div class="pq" style="margin-top:3mm"><p>«&nbsp;Vous avez commencé à voir la différence entre le personnage et celui qui le joue. Maintenant vient l'étape la plus délicate&nbsp;: accueillir le vertige de ne plus savoir exactement qui vous êtes — et rester là.&nbsp;»</p><cite>Méthode V.A.L.E.U.R© — Module 2 · ACCUEILLIR</cite></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl act">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-d" id="mod2">
+<div class="page-d-bg">A</div>
+<div class="pg-hd-d"><span class="pg-ch-d">Masque Violet · Module 2</span><span class="pg-nb-d">20</span></div>
+<span class="tag-g">Étape 2 · Semaines 3 &amp; 4</span>
+<h1 class="lh" style="font-size:22pt;margin-bottom:1mm">ACCUEILLIR</h1>
+<p class="sub lh">«&nbsp;Je reçois ce qui est là, sans lui ajouter de combat.&nbsp;»</p>
+<div class="rule-gl"></div>
+<p class="body lh">Accueillir le vertige identitaire · La peur de dissolution<br>Les 7 stratégies de rigidité du Masque Violet<br>La fenêtre de tolérance identitaire · Protocole en 4 temps</p>
+<div class="pg-ft-d"><span class="pg-ft-td">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl act">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 2 · Fondation</span><span class="pg-nb">21</span></div>
+<span class="tag">Le vertige identitaire</span>
+<h2>Accueillir le vertige de ne pas savoir<br>exactement qui on est</h2>
+<div class="rule-g"></div>
+<p class="body">Le vertige identitaire — ce moment où le sol se dérobe parce qu'on remet en question qui on est — est l'une des expériences les plus déstabilisantes qui soient. Le Masque Violet le traite comme une urgence absolue. ACCUEILLIR, c'est apprendre à le laisser traverser — à rester <strong>dans l'incertitude identitaire sans se précipiter pour la refermer</strong>.</p>
+<p class="body">Car c'est précisément dans cet espace d'incertitude — quand les vieux rôles ne tiennent plus et que le nouveau soi n'est pas encore formé — que le Vrai Self commence à émerger.</p>
+<div class="g2">
+<div class="gcell" style="border-color:rgba(110,20,180,.2)"><span class="gc-lbl" style="color:rgba(110,20,180,.65)">Résistance — Marc</span><span class="gc-txt">Un ami lui dit qu'il a changé. Marc ressent le vertige. Il passe la nuit à «&nbsp;retrouver ses repères&nbsp;» — ses anciennes habitudes, ses anciens discours. Le matin, il est épuisé. Et un peu plus éloigné de lui-même.</span></div>
+<div class="gcell" style="border-color:#9030d040"><span class="gc-lbl" style="color:#9030d0">Accueil — Nadia</span><span class="gc-txt">Même remarque. Nadia ressent le vertige. Elle le nomme&nbsp;: «&nbsp;Il y a de l'anxiété identitaire en moi.&nbsp;» Elle respire. Elle laisse le vertige traverser. Le matin, quelque chose est plus léger.</span></div>
+</div>
+<div class="pq"><p>«&nbsp;L'identité authentique n'est pas figée — elle évolue naturellement avec les expériences de vie. Ce que je crains de perdre n'est peut-être qu'une image construite, un rôle que j'ai joué.&nbsp;»</p><cite>Céline Bourbon — De la peur à la joie d'être soi</cite></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl act">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 2 · 4 vérités · 7 stratégies</span><span class="pg-nb">22</span></div>
+<span class="tag">Comprendre la résistance</span>
+<h2>4 vérités sur le changement identitaire —<br>7 stratégies de rigidité</h2>
+<div class="rule-g"></div>
+<div class="step-n"><div class="step-nb">1</div><div class="step-b"><div class="step-t">Le changement n'est pas une perte — c'est un approfondissement</div><div class="step-tx">Ce qui change, c'est le personnage. Ce qui reste — la conscience qui observe — n'a jamais changé.</div></div></div>
+<div class="step-n"><div class="step-nb">2</div><div class="step-b"><div class="step-t">La confusion identitaire est une étape, pas une destination</div><div class="step-tx">Ne pas savoir exactement qui on est n'est pas une pathologie — c'est souvent le signe qu'on approche de quelque chose de vrai.</div></div></div>
+<div class="step-n"><div class="step-nb">3</div><div class="step-b"><div class="step-t">Le Vrai Self ne peut pas être perdu — seulement recouvert</div><div class="step-tx">Il attend, sous les couches. Il a attendu des années. Il peut attendre encore quelques semaines.</div></div></div>
+<div class="step-n"><div class="step-nb">4</div><div class="step-b"><div class="step-t">La mélancolie du faux self a une durée</div><div class="step-tx">Elle dure exactement le temps qu'on résiste à être soi. Elle se dissout progressivement quand on commence à vivre depuis sa vraie nature.</div></div></div>
+<h3 style="margin-top:3mm">Les 7 stratégies de rigidité du Masque Violet</h3>
+<ul class="il">
+<li><strong>Attachement aux rôles connus</strong> — s'accrocher au personnage même épuisant, car au moins il est connu</li>
+<li><strong>Résistance au changement</strong> — rejeter les transformations, les nouvelles expériences, les nouvelles facettes</li>
+<li><strong>Rejet des miroirs</strong> — éviter ceux qui voient notre vraie nature, préférer ceux qui confirment le rôle</li>
+<li><strong>Conformisme défensif</strong> — s'adapter au groupe pour ne jamais avoir à révéler qui on est vraiment</li>
+<li><strong>Nostalgie paralysante</strong> — s'accrocher à une identité passée pour ne pas affronter ce que l'on est en train de devenir</li>
+<li><strong>Surmenage identitaire</strong> — se surcharger d'activités pour ne pas avoir le temps de se demander qui on est</li>
+<li><strong>Hostilité envers les «&nbsp;authentiques&nbsp;»</strong> — critiquer ceux qui s'expriment librement, parce que leur liberté réveille la nôtre</li>
+</ul>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl act">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 2 · Protocole ACCUEILLIR</span><span class="pg-nb">23</span></div>
+<span class="tag">Outil physiologique</span>
+<h2>La cohérence cardiaque + le protocole en 4 temps</h2>
+<p class="sub">Réguler le vertige — et laisser l'identité bouger</p>
+<div class="rule-g"></div>
+<div style="border:.5px solid #9030d0;background:rgba(14,1,24,.04);padding:4mm 5mm;margin-bottom:3.5mm;text-align:center">
+<p style="font-family:'Cormorant Garamond',serif;font-size:13pt;font-weight:500;color:var(--ink);margin-bottom:1.5mm">3 fois par jour · 6 cycles par minute · 5 minutes</p>
+<p style="font-family:'Jost',sans-serif;font-size:7pt;color:var(--inkm);line-height:1.7">Inspiration&nbsp;: 5 secondes par le nez, abdomen qui se gonfle.<br>Expiration&nbsp;: 5 secondes par la bouche, abdomen qui se dévide lentement.</p>
+</div>
+<h3>Le protocole ACCUEILLIR en 4 temps — Masque Violet</h3>
+<div class="step-n"><div class="step-nb">1</div><div class="step-b"><div class="step-t">Nommer — sans chercher à refermer</div><div class="step-tx">«&nbsp;Je remarque du vertige identitaire. Il y a de l'anxiété de dissolution en moi.&nbsp;» Pas «&nbsp;je ne sais plus qui je suis&nbsp;» — «&nbsp;il y a de l'incertitude identitaire — et c'est normal à ce stade du chemin.&nbsp;»</div></div></div>
+<div class="step-n"><div class="step-nb">2</div><div class="step-b"><div class="step-t">Réguler — 3 cycles de cohérence cardiaque</div><div class="step-tx">3 respirations lentes. Vous ancrez votre conscience dans le corps — le seul endroit où le Vrai Self peut commencer à parler.</div></div></div>
+<div class="step-n"><div class="step-nb">3</div><div class="step-b"><div class="step-t">Localiser — l'incertitude dans le corps</div><div class="step-tx">«&nbsp;Où est-ce&nbsp;? Vertige&nbsp;? Flottement&nbsp;? Vide&nbsp;? Sensation d'être déconnecté·e de soi&nbsp;?&nbsp;» Décrire, pas conclure.</div></div></div>
+<div class="step-n"><div class="step-nb">4</div><div class="step-b"><div class="step-t">Traverser — rester dans l'espace ouvert</div><div class="step-tx">Laisser l'incertitude identitaire exister sans la refermer précipitamment. Ce vide n'est pas dangereux — c'est l'espace où quelque chose de vrai peut émerger.</div></div></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl act">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 2 · Journal semaines 3–4</span><span class="pg-nb">24</span></div>
+<span class="tag">Journal de bord</span>
+<h2>Semaines 3–4 — La météo identitaire</h2>
+<p class="sub">Chaque soir — nommer le vertige, ne pas le fuir</p>
+<div class="rule-g"></div>
+<table class="jtable">
+<tr><th>Jour</th><th>Déclencheur identitaire</th><th>Intensité (1–5)</th><th>Rigidité ou accueil&nbsp;?</th></tr>
+<tr><td><input type='text' placeholder='Lundi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Mardi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Mercredi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Jeudi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Vendredi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Samedi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Dimanche'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+</table>
+<p class="exo-q">Le vertige revenu le plus souvent — et ce qu'il essaie peut-être de me montrer sur qui je suis vraiment&nbsp;:</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder=""></div><div class="wline"><input type="text" placeholder=""></div></div>
+<p class="exo-q">Y a-t-il eu un moment où j'ai laissé l'incertitude identitaire exister sans la fuir&nbsp;? Qu'ai-je aperçu de l'autre côté&nbsp;?</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl act">A</div><div class="pl ">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 2 · Bilan ACCUEILLIR</span><span class="pg-nb">25</span></div>
+<span class="tag">Bilan</span>
+<h2>Bilan des 2 semaines</h2>
+<p class="sub">Avant de passer à LOCALISER</p>
+<div class="rule-g"></div>
+<p class="exo-q"><strong>Question 1</strong> — Quelle stratégie de rigidité identitaire vous ressemble le plus&nbsp;?</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<p class="exo-q"><strong>Question 2</strong> — Y a-t-il eu un moment où vous avez laissé le vertige traverser sans fermer l'espace&nbsp;? Qu'avez-vous entrevu&nbsp;?</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<p class="exo-q"><strong>Question 3</strong> — Quelle mélancolie répétitive porte peut-être un désir profond non satisfait de votre Vrai Self&nbsp;?</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<div class="pq" style="margin-top:2mm"><p>«&nbsp;Vous avez commencé à tenir l'incertitude sans la fuir. Le Module 3 va vous apprendre à trouver l'empreinte corporelle du faux self — et l'adresse du vrai.&nbsp;»</p><cite>Méthode V.A.L.E.U.R© — Module 3 · LOCALISER</cite></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl act">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-d" id="mod3">
+<div class="page-d-bg">L</div>
+<div class="pg-hd-d"><span class="pg-ch-d">Masque Violet · Module 3</span><span class="pg-nb-d">26</span></div>
+<span class="tag-g">Étape 3 · Semaines 5 &amp; 6</span>
+<h1 class="lh" style="font-size:22pt;margin-bottom:1mm">LOCALISER</h1>
+<p class="sub lh">«&nbsp;Le corps garde la mémoire du vrai.&nbsp;»</p>
+<div class="rule-gl"></div>
+<p class="body lh">Le corps du faux self vs le corps du vrai self<br>La dissociation légère — signature du Masque Violet<br>Body Scan existentiel · Retrouver le corps comme ancrage</p>
+<div class="pg-ft-d"><span class="pg-ft-td">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl act">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 3 · Fondation</span><span class="pg-nb">27</span></div>
+<span class="tag">Le corps comme mémoire du vrai</span>
+<h2>Le corps du faux self —<br>et le corps du vrai self</h2>
+<div class="rule-g"></div>
+<p class="body">Le Masque Violet a une signature corporelle particulière — très différente des autres masques. Là où les autres masques génèrent de la tension, du serrement, de l'activation, le Masque Violet génère souvent <strong>le contraire</strong>&nbsp;: un certain flottement, une légère déconnexion, une impression d'être à côté de son propre corps.</p>
+<p class="body">C'est parce que maintenir un Faux Self exige une <strong>dissociation légère permanente</strong>&nbsp;: être présent·e à ce que le contexte attend, pas à ce que le corps ressent. Le corps, lui, garde la mémoire du vrai — même quand l'esprit a appris à ne pas écouter.</p>
+<div class="g2">
+<div class="gcell"><span class="gc-lbl" style="color:rgba(110,20,180,.55)">Corps du Faux Self</span><span class="gc-txt">Légère déconnexion · flottement · impression d'être «&nbsp;à côté de soi&nbsp;» · posture calibrée pour le rôle · mouvements contrôlés · sourire qui ne vient pas du ventre.</span></div>
+<div class="gcell" style="border-color:#9030d040"><span class="gc-lbl" style="color:#9030d0">Corps du Vrai Self</span><span class="gc-txt">Résonance · frisson de justesse · légèreté soudaine · respiration qui descend · sensation d'être «&nbsp;dans» son corps · geste spontané non calculé.</span></div>
+</div>
+<div class="pq"><p>«&nbsp;Tout ce qui ne s'exprime pas s'imprime. Le corps garde la trace de toutes les fois où vous avez été quelqu'un d'autre pour survivre.&nbsp;»</p><cite>Méthode V.A.L.E.U.R© — Céline Bourbon</cite></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl act">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 3 · Carte corporelle du Masque Violet</span><span class="pg-nb">28</span></div>
+<span class="tag">L'empreinte corporelle</span>
+<h2>La carte corporelle du Masque Violet</h2>
+<p class="sub">Les zones du faux self — et les zones du vrai</p>
+<div class="rule-g"></div>
+<h3>Zones du Faux Self — là où le personnage se manifeste</h3>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>Visage / expression</strong> — Sourire de façade, expression calibrée pour le rôle. Vous sentez parfois une légère discordance entre votre expression et ce que vous ressentez.</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>Voix / gorge</strong> — Ton adapté, mots choisis pour coller au rôle. La gorge serrée quand quelque chose de vrai essaie de passer.</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>Poitrine / sternum</strong> — Légère oppression, sentiment de «&nbsp;retenir quelque chose&nbsp;». L'endroit où le Vrai Self cherche à s'exprimer et rencontre le barrage.</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>Corps entier — flottement</strong> — Impression d'être «&nbsp;à côté&nbsp;» de soi-même, spectateur de sa propre vie. Dissociation légère caractéristique.</span></div>
+<h3 style="margin-top:3mm">Zones du Vrai Self — là où il se manifeste encore</h3>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>Bas-ventre / plexus</strong> — Le «&nbsp;ressenti de justesse&nbsp;» — ce frisson qui dit «&nbsp;oui, c'est ça&nbsp;». Le Vrai Self parle encore ici.</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>Épaules qui descendent</strong> — Quand vous êtes vraiment vous-même, les épaules descendent naturellement. Ce soulagement physique est un signal.</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>Respiration spontanée</strong> — Quand on cesse de jouer un rôle, la respiration descend dans le ventre. Automatiquement. Sans effort.</span></div>
+<p class="exo-q">Quand est-ce que j'ai senti récemment un «&nbsp;moment de Vrai Self&nbsp;» dans mon corps&nbsp;?</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl act">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 3 · Body Scan existentiel</span><span class="pg-nb">29</span></div>
+<span class="tag">Exercice guidé</span>
+<h2>Le Body Scan existentiel V.A.L.E.U.R©</h2>
+<p class="sub">Scanner le Faux Self — et laisser émerger le Vrai</p>
+<div class="rule-g"></div>
+<div class="step-n"><div class="step-nb">1</div><div class="step-b"><div class="step-t">Ancrage — posez les deux pieds au sol, 3 respirations</div><div class="step-tx">«&nbsp;Je suis ici. Mon corps est réel. Ce que je ressens est réel. Je l'écoute — sans jouer de rôle.&nbsp;»</div></div></div>
+<div class="step-n"><div class="step-nb">2</div><div class="step-b"><div class="step-t">Scanner le Faux Self — visage, gorge, poitrine, corps entier</div><div class="step-tx">Y a-t-il de la dissociation&nbsp;? Du flottement&nbsp;? Une expression ou posture qui «&nbsp;joue un rôle&nbsp;»&nbsp;? Sans jugement — juste observer.</div></div></div>
+<div class="step-n"><div class="step-nb">3</div><div class="step-b"><div class="step-t">Scanner le Vrai Self — bas-ventre, épaules, respiration</div><div class="step-tx">Y a-t-il un endroit où quelque chose de vrai se manifeste encore&nbsp;? Un ressenti de justesse, un soulagement, une résonance&nbsp;?</div></div></div>
+<div class="step-n"><div class="step-nb">4</div><div class="step-b"><div class="step-t">Dialogue — poser la question au corps</div><div class="step-tx">«&nbsp;Qu'est-ce qui en moi cherche à s'exprimer et n'en a pas l'espace&nbsp;? Pas une pensée — une sensation.&nbsp;»</div></div></div>
+<div class="step-n"><div class="step-nb">5</div><div class="step-b"><div class="step-t">Respirez 5·5·5 vers la zone du Vrai Self</div><div class="step-tx">Inspiration 5 sec → vers la zone de résonance vraie. Rétention 5 sec. Expiration 5 sec. Vous envoyez au Vrai Self un signal&nbsp;: «&nbsp;tu peux sortir.&nbsp;»</div></div></div>
+<p class="exo-q">Ce que le Body Scan existentiel m'a montré — zones du Faux Self, zones du Vrai Self&nbsp;:</p>
+<textarea class="wta" rows="3" placeholder="Les zones du Faux Self... / Les zones du Vrai Self..."></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl act">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 3 · Journal corporel semaines 5–6</span><span class="pg-nb">30</span></div>
+<span class="tag">Journal de bord</span>
+<h2>Semaines 5–6 — Journal corporel</h2>
+<p class="sub">Tracer les moments de Faux Self et les moments de Vrai Self dans le corps</p>
+<div class="rule-g"></div>
+<table class="jtable">
+<tr><th>Jour</th><th>Déclencheur</th><th>Corps Faux Self</th><th>Corps Vrai Self</th><th>Signal</th></tr>
+<tr><td><input type='text' placeholder='Lun'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Mar'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Mer'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Jeu'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Ven'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Sam'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Dim'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+</table>
+<p class="exo-q">Le signal corporel du Vrai Self que je commence à reconnaître — sa zone, sa sensation&nbsp;:</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<p class="exo-q">Y a-t-il eu un moment où le corps m'a dit quelque chose de vrai que l'esprit essayait de taire&nbsp;?</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl act">L</div><div class="pl ">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 3 · Bilan LOCALISER</span><span class="pg-nb">31</span></div>
+<span class="tag">Bilan</span>
+<h2>Bilan des 2 semaines</h2>
+<p class="sub">Avant de passer à EXPLORER</p>
+<div class="rule-g"></div>
+<p class="exo-q"><strong>Question 1</strong> — Quelle zone corporelle porte le plus le Faux Self&nbsp;? Et quelle zone est la signature du Vrai Self&nbsp;?</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<p class="exo-q"><strong>Question 2</strong> — Y a-t-il eu un moment de Vrai Self dans votre corps cette semaine&nbsp;? Dans quel contexte&nbsp;?</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<p class="exo-q"><strong>Question 3</strong> — Si votre corps pouvait exprimer quelque chose de vrai sans censure, que dirait-il&nbsp;?</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<div class="pq" style="margin-top:2mm"><p>«&nbsp;Vous avez trouvé les adresses — celle du Faux Self et celle du Vrai Self. Le Module 4 va vous permettre de comprendre ce que le Masque Violet protège vraiment, et combien de couches il y a à traverser.&nbsp;»</p><cite>Méthode V.A.L.E.U.R© — Module 4 · EXPLORER</cite></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl act">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-d" id="mod4">
+<div class="page-d-bg">E</div>
+<div class="pg-hd-d"><span class="pg-ch-d">Masque Violet · Module 4</span><span class="pg-nb-d">32</span></div>
+<span class="tag-g">Étape 4 · Semaines 7 &amp; 8</span>
+<h1 class="lh" style="font-size:22pt;margin-bottom:1mm">EXPLORER</h1>
+<p class="sub lh">«&nbsp;Sous tous ces masques, il y a un Soi plus vaste, plus libre, plus vrai.&nbsp;»</p>
+<div class="rule-gl"></div>
+<p class="body lh">Les 7 couches du Faux Self · Les 7 questions<br>La technique des 5 pourquoi · Le Vrai Self sous les masques<br>Cartographier ce qui est vraiment vous · Coûts-bénéfices</p>
+<div class="pg-ft-d"><span class="pg-ft-td">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl act">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 4 · Les 7 couches du Faux Self</span><span class="pg-nb">33</span></div>
+<span class="tag">Ce que le masque protège</span>
+<h2>Les 7 couches du Faux Self —<br>et le Vrai Self en dessous</h2>
+<div class="rule-g"></div>
+<p class="body">Le Masque Violet est une pelure d'oignon. Chaque peur non traversée a ajouté une couche au personnage. Explorer, pour le Violet, c'est <strong>nommer ces couches une par une</strong> — non pour les arracher brutalement, mais pour reconnaître leur origine et commencer à les alléger.</p>
+<div class="pq"><p>«&nbsp;Il cristallise toutes ces fois où vous n'avez pas pu vous choisir. Sous tous ces masques, il y a un Soi plus vaste, plus libre, plus vrai. La joie spontanée, la curiosité, la capacité d'émerveillement que vous aviez enfant — sont toujours là, en attente.&nbsp;»</p><cite>Céline Bourbon — De la peur à la joie d'être soi · L'Harmattan</cite></div>
+<p class="exo-q" style="margin-bottom:2mm">Pour chaque masque, nommez la couche qu'il a ajoutée à votre personnage — et ce qu'il cache de vrai&nbsp;:</p>
+<div style="display:grid;grid-template-columns:auto 1fr 1fr;gap:0;margin-bottom:3mm">
+<div style="padding:2mm 3mm;background:var(--creamm);border:.4px solid var(--creamd);font-family:Jost,sans-serif;font-size:5.5pt;font-weight:600;text-transform:uppercase;letter-spacing:.15em;color:var(--inkf)">Masque</div>
+<div style="padding:2mm 3mm;background:var(--creamm);border:.4px solid var(--creamd);font-family:Jost,sans-serif;font-size:5.5pt;font-weight:600;text-transform:uppercase;letter-spacing:.15em;color:var(--inkf)">Couche ajoutée au personnage</div>
+<div style="padding:2mm 3mm;background:var(--creamm);border:.4px solid var(--creamd);font-family:Jost,sans-serif;font-size:5.5pt;font-weight:600;text-transform:uppercase;letter-spacing:.15em;color:var(--inkf)">Ce qu'il cache de vrai</div>
+<div style="padding:1.5mm 3mm;border:.4px solid var(--creamd);font-family:Jost,sans-serif;font-size:6.5pt;font-weight:600;color:#a03030">🔴 Rouge</div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd)"><input type="text" style="width:100%;border:none;background:transparent;font-family:Jost,sans-serif;font-size:6.5pt;color:var(--inkm)"></div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd)"><input type="text" style="width:100%;border:none;background:transparent;font-family:Jost,sans-serif;font-size:6.5pt;color:var(--inkm)"></div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd);font-family:Jost,sans-serif;font-size:6.5pt;font-weight:600;color:#c46800">🟠 Orange</div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd)"><input type="text" style="width:100%;border:none;background:transparent;font-family:Jost,sans-serif;font-size:6.5pt;color:var(--inkm)"></div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd)"><input type="text" style="width:100%;border:none;background:transparent;font-family:Jost,sans-serif;font-size:6.5pt;color:var(--inkm)"></div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd);font-family:Jost,sans-serif;font-size:6.5pt;font-weight:600;color:#c4aa00">🟡 Jaune</div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd)"><input type="text" style="width:100%;border:none;background:transparent;font-family:Jost,sans-serif;font-size:6.5pt;color:var(--inkm)"></div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd)"><input type="text" style="width:100%;border:none;background:transparent;font-family:Jost,sans-serif;font-size:6.5pt;color:var(--inkm)"></div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd);font-family:Jost,sans-serif;font-size:6.5pt;font-weight:600;color:#3d8a42">🟢 Vert</div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd)"><input type="text" style="width:100%;border:none;background:transparent;font-family:Jost,sans-serif;font-size:6.5pt;color:var(--inkm)"></div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd)"><input type="text" style="width:100%;border:none;background:transparent;font-family:Jost,sans-serif;font-size:6.5pt;color:var(--inkm)"></div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd);font-family:Jost,sans-serif;font-size:6.5pt;font-weight:600;color:#2e72d8">🔵 Bleu</div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd)"><input type="text" style="width:100%;border:none;background:transparent;font-family:Jost,sans-serif;font-size:6.5pt;color:var(--inkm)"></div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd)"><input type="text" style="width:100%;border:none;background:transparent;font-family:Jost,sans-serif;font-size:6.5pt;color:var(--inkm)"></div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd);font-family:Jost,sans-serif;font-size:6.5pt;font-weight:600;color:#4a40d8">🔷 Indigo</div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd)"><input type="text" style="width:100%;border:none;background:transparent;font-family:Jost,sans-serif;font-size:6.5pt;color:var(--inkm)"></div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd)"><input type="text" style="width:100%;border:none;background:transparent;font-family:Jost,sans-serif;font-size:6.5pt;color:var(--inkm)"></div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd);font-family:Jost,sans-serif;font-size:6.5pt;font-weight:600;color:#9030d0">🟣 Violet</div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd)"><input type="text" style="width:100%;border:none;background:transparent;font-family:Jost,sans-serif;font-size:6.5pt;color:var(--inkm)"></div><div style="padding:1.5mm 3mm;border:.4px solid var(--creamd)"><input type="text" style="width:100%;border:none;background:transparent;font-family:Jost,sans-serif;font-size:6.5pt;color:var(--inkm)"></div>
+</div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl act">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 4 · Les 7 questions du dialogue</span><span class="pg-nb">34</span></div>
+<span class="tag">Exercice 1</span>
+<h2>Les 7 questions du dialogue intérieur</h2>
+<p class="sub">Descendre couche après couche jusqu'à la source</p>
+<div class="rule-g"></div>
+<p class="exo-q"><strong>1.</strong> Quel masque je reconnais en ce moment ?</p><div class="wlines"><div class="wline"><input type="text" placeholder="Mon Masque Violet — peur de perdre mon identité"></div></div><p class="exo-q"><strong>2.</strong> Quel déclencheur a réveillé le Masque Violet cette semaine ?</p><div class="wlines"><div class="wline"><input type="text" placeholder="Ce qui a menacé mon rôle habituel..."></div></div><p class="exo-q"><strong>3.</strong> Quel automatisme identitaire s'est mis en route ?</p><div class="wlines"><div class="wline"><input type="text" placeholder="Je me suis accroché·e à... / J'ai évité..."></div></div><p class="exo-q"><strong>4.</strong> Quel est le récit sur moi-même que le Masque Violet défend ?</p><div class="wlines"><div class="wline"><input type="text" placeholder="«&nbsp;Je suis quelqu'un qui...&nbsp;» / «&nbsp;Je ne suis pas quelqu'un qui...&nbsp;»"></div></div><p class="exo-q"><strong>5.</strong> Quelle origine — même floue — je peux entrevoir ?</p><div class="wlines"><div class="wline"><input type="text" placeholder="Le moment où être moi-même est devenu dangereux..."></div></div><p class="exo-q"><strong>6.</strong> Quel besoin réel se cache derrière la rigidité identitaire ?</p><div class="wlines"><div class="wline"><input type="text" placeholder="Cohérence, reconnaissance, sécurité, appartenance..."></div></div><p class="exo-q"><strong>7.</strong> Quelle valeur vraie ce masque empêche-t-il de s'exprimer ?</p><div class="wlines"><div class="wline"><input type="text" placeholder="Spontanéité, authenticité, liberté d'être, créativité..."></div></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl act">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 4 · Les 5 pourquoi</span><span class="pg-nb">35</span></div>
+<span class="tag">Exercice 2</span>
+<h2>La technique des 5 pourquoi</h2>
+<p class="sub">Descendre vers la peur fondamentale de dissolution</p>
+<div class="rule-g"></div>
+<p class="body" style="font-size:7pt;font-style:italic;color:var(--inkl)">Ex.&nbsp;: Pourquoi je résiste à ce changement&nbsp;? → Parce que si je change, je ne suis plus moi. Pourquoi&nbsp;? → Parce que «&nbsp;moi&nbsp;» c'est ce rôle que je joue. Pourquoi ce rôle = moi&nbsp;? → Parce que c'est tout ce qu'on m'a appris à être. Pourquoi&nbsp;? → Parce que ma vraie nature n'a jamais eu l'espace de s'exprimer. Pourquoi cet espace est-il encore fermé&nbsp;? → Parce que je ne sais pas encore qui je suis sans ce rôle — et c'est exactement ce que ce livret va changer.</p>
+<p class="exo-q">Ma question de départ — Pourquoi je résiste à...</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder="Pourquoi je résiste à / refuse de / ne peux pas..."></div></div>
+<p class="exo-q">1. Parce que... — Pourquoi cette réponse&nbsp;?</p><div class="wlines"><div class="wline"><input type="text" placeholder=""></div></div><p class="exo-q">2. Parce que... — Pourquoi cette réponse&nbsp;?</p><div class="wlines"><div class="wline"><input type="text" placeholder=""></div></div><p class="exo-q">3. Parce que... — Pourquoi cette réponse&nbsp;?</p><div class="wlines"><div class="wline"><input type="text" placeholder=""></div></div><p class="exo-q">4. Parce que... — Pourquoi cette réponse&nbsp;?</p><div class="wlines"><div class="wline"><input type="text" placeholder=""></div></div><p class="exo-q">5. Parce que... — Pourquoi cette réponse&nbsp;?</p><div class="wlines"><div class="wline"><input type="text" placeholder=""></div></div>
+<div style="border:.5px solid #9030d0;background:rgba(14,1,24,.04);padding:3mm 4mm;margin-top:2mm">
+<span style="font-family:'Jost',sans-serif;font-size:5.5pt;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#9030d0;display:block;margin-bottom:1.5mm">Ce que le Masque Violet protège vraiment</span>
+<div class="wlines"><div class="wline"><input type="text" placeholder="La peur fondamentale — ce que j'ai trouvé au bout de la chaîne..."></div><div class="wline"><input type="text" placeholder=""></div></div>
+</div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl act">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 4 · Valeurs et conflit identitaire</span><span class="pg-nb">36</span></div>
+<span class="tag">Exercices 3, 4 &amp; 5</span>
+<h2>Ce qui est vraiment vous —<br>valeurs, conflit, coûts</h2>
+<div class="rule-g"></div>
+<p class="exo-q" style="font-style:normal;font-family:'Jost',sans-serif;font-size:7.5pt;color:var(--inkm);margin-bottom:2mm">Entourez les valeurs qui résonnent comme «&nbsp;vraiment moi&nbsp;» — indépendamment des rôles</p>
+<div style="display:flex;flex-wrap:wrap;gap:1.5mm 2mm;margin-bottom:3.5mm"><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Authenticité</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Spontanéité</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Liberté d'être</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Créativité</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Expression</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Vérité</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Fluidité</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Curiosité</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Émerveillement</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Jeu</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Joie</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Profondeur</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Sens</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Croissance</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Transformation</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Évolution</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Connexion vraie</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Présence</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Intimité</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Intégrité</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Courage</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Unicité</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Imperfection assumée</span><span onclick="togVal(this)" style="font-family:Jost,sans-serif;font-size:6.5pt;padding:.25em .65em;border:.4px solid var(--creamd);border-radius:1px;cursor:pointer;color:var(--inkm);transition:all .2s">Simplicité</span></div>
+<p class="exo-q">Mes 3 valeurs les plus profondes — celles qui appartiennent au Vrai Self, pas au personnage&nbsp;:</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder=""></div><div class="wline"><input type="text" placeholder=""></div><div class="wline"><input type="text" placeholder=""></div></div>
+<div style="border:.5px solid #9030d0;background:rgba(14,1,24,.03);padding:3mm 4mm;margin-bottom:3mm">
+<p class="exo-q" style="border-color:transparent;padding-left:0">Mon Masque Violet se maintient dans le rôle pour éviter de se perdre — ET une autre part aspire à&nbsp;:</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder=""></div></div>
+<p class="exo-q" style="border-color:transparent;padding-left:0">Cette rigidité identitaire me coûte chaque jour&nbsp;:</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder=""></div></div>
+</div>
+<div class="g2">
+<div class="gcell"><span class="gc-lbl">Ce que le Faux Self m'apporte</span><textarea class="wta" rows="2" placeholder=""></textarea></div>
+<div class="gcell"><span class="gc-lbl">Ce qu'il me coûte</span><textarea class="wta" rows="2" placeholder=""></textarea></div>
+</div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl act">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 4 · Journal semaines 7–8</span><span class="pg-nb">37</span></div>
+<span class="tag">Journal de bord</span>
+<h2>Semaines 7–8 — Journal d'exploration identitaire</h2>
+<div class="rule-g"></div>
+<table class="jtable">
+<tr><th>Jour</th><th>Déclencheur</th><th>Couche Faux Self activée</th><th>Valeur vraie bafouée</th><th>Ce que le Vrai Self voulait</th></tr>
+<tr><td><input type='text' placeholder='Lundi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Mardi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Mercredi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Jeudi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Vendredi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Samedi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Dimanche'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+</table>
+<p class="exo-q">Ce que ce journal me révèle sur qui je suis vraiment — au-delà des rôles&nbsp;:</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl act">E</div><div class="pl ">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 4 · Bilan EXPLORER</span><span class="pg-nb">38</span></div>
+<span class="tag">Bilan</span>
+<h2>Bilan des 2 semaines</h2>
+<p class="sub">Avant de passer à UNIFIER</p>
+<div class="rule-g"></div>
+<p class="exo-q"><strong>Question 1</strong> — Les couches du Faux Self que j'ai identifiées — lesquelles sont les plus épaisses&nbsp;?</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<p class="exo-q"><strong>Question 2</strong> — La peur fondamentale au bout des 5 pourquoi — ce que le Masque Violet protège vraiment&nbsp;:</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<p class="exo-q"><strong>Question 3</strong> — La valeur vraie qui appartient au Vrai Self — et pourquoi elle compte autant&nbsp;:</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<div class="pq" style="margin-top:2mm"><p>«&nbsp;Vous avez nommé les couches. UNIFIER, c'est créer la paix — non pas en arrachant le masque d'un coup, mais en lui signifiant progressivement qu'il peut se reposer.&nbsp;»</p><cite>Méthode V.A.L.E.U.R© — Module 5 · UNIFIER</cite></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl done">E</div><div class="pl act">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-d" id="mod5">
+<div class="page-d-bg">U</div>
+<div class="pg-hd-d"><span class="pg-ch-d">Masque Violet · Module 5</span><span class="pg-nb-d">39</span></div>
+<span class="tag-g">Étape 5 · Semaines 9 &amp; 10</span>
+<h1 class="lh" style="font-size:22pt;margin-bottom:1mm">UNIFIER</h1>
+<p class="sub lh">«&nbsp;Je suis plus que tous mes masques — et c'est là que commence la liberté.&nbsp;»</p>
+<div class="rule-gl"></div>
+<p class="body lh">La réconciliation finale · Le Faux Self comme ami, pas ennemi<br>«&nbsp;Je pourrais changer ET rester moi-même&nbsp;»<br>La lettre au Faux Self · L'acte de fidélité au Vrai Self</p>
+<div class="pg-ft-d"><span class="pg-ft-td">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl done">E</div><div class="pl act">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 5 · La réconciliation finale</span><span class="pg-nb">40</span></div>
+<span class="tag">Le faux self n'est pas votre ennemi</span>
+<h2>La réconciliation finale —<br>remercier le personnage</h2>
+<p class="sub">Il vous a sauvé. Il peut maintenant se reposer.</p>
+<div class="rule-g"></div>
+<p class="body">Votre Faux Self n'est pas votre ennemi. Il n'est pas une faiblesse. Il est la preuve que vous étiez suffisamment intelligent·e pour survivre dans un environnement qui n'avait pas toujours de place pour votre vraie nature. <strong>UNIFIER, c'est le remercier — et lui signifier que la survie n'est plus l'enjeu.</strong></p>
+<div class="g2" style="margin:3mm 0">
+<div class="gcell" style="border-color:rgba(110,20,180,.2)"><span class="gc-lbl" style="color:rgba(110,20,180,.6)">Avant l'unification</span><span class="gc-txt">«&nbsp;Je dois rester ce personnage — sinon je perds tout.&nbsp;»<br>Rigidité · mélancolie · fatigue d'être quelqu'un d'autre</span></div>
+<div class="gcell" style="border-color:#9030d040"><span class="gc-lbl" style="color:#9030d0">Après l'unification</span><span class="gc-txt">«&nbsp;Je peux être moi — même si ça change quelque chose.&nbsp;»<br>Fluidité · légèreté · présence authentique · joie de vivre depuis soi</span></div>
+</div>
+<div class="pq"><p>«&nbsp;Cette libération révèle notre nature véritable&nbsp;: joyeuse, fluide, créative, infiniment adaptable. C'est la résurrection de nos élans intérieurs dans toute leur spontanéité.&nbsp;»</p><cite>Céline Bourbon — De la peur à la joie d'être soi · L'Harmattan</cite></div>
+<p class="exo-q">Ce que j'ai compris sur mon Faux Self que je n'avais pas encore osé formuler&nbsp;:</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl done">E</div><div class="pl act">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 5 · Les 3 questions + Formule</span><span class="pg-nb">41</span></div>
+<span class="tag">Exercices 1 &amp; 2</span>
+<h2>Les 3 questions + «&nbsp;Je pourrais changer ET rester moi&nbsp;»</h2>
+<div class="rule-g"></div>
+<div class="step-n"><div class="step-nb">1</div><div class="step-b"><div class="step-t">Qu'est-ce que mon Masque Violet essaie vraiment de faire&nbsp;?</div><div class="step-tx">Protéger une cohérence intérieure — garantir que vous ne vous dissolviez pas. Ce besoin est légitime. La rigidité n'est plus nécessaire pour le satisfaire.</div></div></div>
+<p class="exo-q">Mon Masque Violet essaie de...</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<div class="step-n"><div class="step-nb">2</div><div class="step-b"><div class="step-t">Comment satisfaire ce besoin autrement&nbsp;?</div><div class="step-tx">Vivre depuis une cohérence profonde — non pas le personnage, mais les valeurs vraies. L'identité comme jardin, pas comme forteresse.</div></div></div>
+<div class="g2" style="margin-bottom:3mm">
+<div class="gcell"><span class="gc-lbl">Ancien automatisme</span><textarea class="wta" rows="2" placeholder=""></textarea></div>
+<div class="gcell"><span class="gc-lbl" style="color:#9030d0">Nouvelle stratégie</span><textarea class="wta" rows="2" placeholder=""></textarea></div>
+</div>
+<h3>La formule centrale du Masque Violet</h3>
+<div style="border:.5px solid #9030d0;padding:3mm 4mm;margin-bottom:2.5mm;background:rgba(14,1,24,.03)">
+<p class="body" style="font-size:8pt;font-style:italic;color:var(--inkl)">Je pourrais changer ET rester essentiellement moi — plus moi, même.<br>Je pourrais être différent·e ET ce serait toujours moi qui vit cette vie.<br>Je pourrais ne plus jouer ce rôle ET il y a quelque chose en dessous qui est plus vaste et plus libre.<br>Je suis plus que tous mes masques ET c'est là que commence la vraie liberté.</p>
+</div>
+<p class="exo-q">Ma phrase d'unification personnelle — «&nbsp;Je pourrais changer ET...&nbsp;»</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder=""></div><div class="wline"><input type="text" placeholder=""></div></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl done">E</div><div class="pl act">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 5 · La lettre au Faux Self</span><span class="pg-nb">42</span></div>
+<span class="tag">Exercice pivot — le plus important</span>
+<h2>La lettre au Faux Self</h2>
+<p class="sub">Lettre à tous les personnages que vous avez joués pour survivre</p>
+<div class="rule-g"></div>
+<p class="body" style="font-size:7pt;font-style:italic;color:var(--inkl)">Cette lettre est la plus profonde de la collection. Écrivez à tout ce que vous avez construit pour ne pas être vous-même. Reconnaissez sa sagesse. Remerciez sa loyauté. Et libérez-le de sa mission.</p>
+<p style="font-family:'Cormorant Garamond',serif;font-size:9pt;font-weight:500;font-style:italic;color:var(--ink);margin-bottom:3mm">Chers personnages que j'ai joués,</p>
+<textarea class="wta" rows="4" placeholder="Commencez par reconnaître ce qu'ils ont fait — ils vous ont protégé quand c'était nécessaire..."></textarea>
+<textarea class="wta" rows="4" placeholder="Continuez par ce que vous comprenez maintenant — vous êtes plus vaste qu'eux tous réunis..."></textarea>
+<textarea class="wta" rows="4" placeholder="Terminez par ce que vous leur dites — ils peuvent se reposer, leur mission est accomplie..."></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl done">E</div><div class="pl act">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 5 · Journal semaines 9–10</span><span class="pg-nb">43</span></div>
+<span class="tag">Journal de bord</span>
+<h2>Semaines 9–10 — Journal d'unification</h2>
+<p class="sub">Observer le choix du Vrai Self — agir depuis soi</p>
+<div class="rule-g"></div>
+<table class="jtable">
+<tr><th>Jour</th><th>Déclencheur identitaire</th><th>Réflexe du Faux Self</th><th>Choix du Vrai Self posé</th></tr>
+<tr><td><input type='text' placeholder='Lundi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Mardi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Mercredi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Jeudi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Vendredi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Samedi'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr><tr><td><input type='text' placeholder='Dimanche'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td></tr>
+</table>
+<p class="exo-q">Mon engagement d'unification&nbsp;:</p>
+<div style="border:.5px solid #9030d0;padding:3mm 4mm;margin-bottom:2mm">
+<p style="font-family:'Jost',sans-serif;font-size:7.5pt;color:var(--inkm);margin-bottom:1mm">«&nbsp;Je choisis de vivre depuis le Vrai Self — même quand le Masque Violet a peur. Je m'engage à&nbsp;:</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder=""></div></div>
+</div>
+<p class="exo-q">Ce que ce journal me révèle — l'espace du Vrai Self qui s'agrandit&nbsp;:</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl done">E</div><div class="pl act">U</div><div class="pl ">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 5 · Bilan UNIFIER</span><span class="pg-nb">44</span></div>
+<span class="tag">Bilan</span>
+<h2>Bilan des 2 semaines</h2>
+<p class="sub">Avant de passer à RENFORCER</p>
+<div class="rule-g"></div>
+<p class="exo-q"><strong>Question 1</strong> — Un moment où j'ai agi depuis le Vrai Self — et ce que j'ai ressenti&nbsp;:</p>
+<textarea class="wta" rows="3" placeholder=""></textarea>
+<p class="exo-q"><strong>Question 2</strong> — Ce que le Faux Self comprend maintenant — ce que vous avez pu lui dire&nbsp;:</p>
+<textarea class="wta" rows="3" placeholder=""></textarea>
+<div class="pq" style="margin-top:2mm"><p>«&nbsp;Vous avez créé la paix entre le personnage et l'être. Il reste maintenant la partie la plus joyeuse du chemin — ancrer le Vrai Self dans votre vie concrète, un acte de courage à la fois.&nbsp;»</p><cite>Méthode V.A.L.E.U.R© — Module 6 · RENFORCER</cite></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl done">E</div><div class="pl done">U</div><div class="pl act">R</div></div></div>
+</div><div class="page page-d" id="mod6">
+<div class="page-d-bg">R</div>
+<div class="pg-hd-d"><span class="pg-ch-d">Masque Violet · Module 6</span><span class="pg-nb-d">45</span></div>
+<span class="tag-g">Étape 6 · Semaines 11 &amp; 12</span>
+<h1 class="lh" style="font-size:22pt;margin-bottom:1mm">RENFORCER</h1>
+<p class="sub lh">«&nbsp;Chaque acte depuis le Vrai Self élargit l'espace de la liberté.&nbsp;»</p>
+<div class="rule-gl"></div>
+<p class="body lh">Plasticité cérébrale · Loi des 90 jours<br>Les 4 piliers · 16 défis de dissolution identitaire<br>Bilan 12 semaines · Lettre au soi futur — le plus profond de tous</p>
+<div class="pg-ft-d"><span class="pg-ft-td">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl done">E</div><div class="pl done">U</div><div class="pl act">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 6 · Plasticité cérébrale</span><span class="pg-nb">46</span></div>
+<span class="tag">Remplacer une forteresse par un jardin</span>
+<h2>Ce qui se passe dans votre cerveau<br>quand vous commencez à être vous-même</h2>
+<div class="rule-g"></div>
+<p class="body">Le Faux Self est une forteresse neuronale construite sur des décennies. <strong>Chaque acte depuis le Vrai Self — chaque moment d'authenticité, chaque expression vraie, chaque «&nbsp;non&nbsp;» dit depuis ses valeurs — creuse la nouvelle route.</strong></p>
+<div class="l90" style="margin:3mm 0">
+<div class="l90cell"><span class="l90n">1×</span><span class="l90t">Compréhension</span><span class="l90b">Vous comprenez que vous jouez un rôle — mais le Faux Self reprend les commandes automatiquement.</span></div>
+<div class="l90cell"><span class="l90n">30×</span><span class="l90t">Espace possible</span><span class="l90b">Être vraiment vous-même devient accessible. Le Vrai Self commence à avoir de la place.</span></div>
+<div class="l90cell" style="border-color:#9030d050"><span class="l90n" style="color:#9030d0">90×</span><span class="l90t" style="color:#9030d0">Nature retrouvée</span><span class="l90b">Vivre depuis le Vrai Self est devenu naturel. La joie spontanée, la fluidité, la présence authentique — accessibles.</span></div>
+</div>
+<h3>Les 4 piliers du renforcement</h3>
+<div class="step-n"><div class="step-nb">1</div><div class="step-b"><div class="step-t">Répétition intentionnelle</div><div class="step-tx">Chaque fois que le Faux Self veut reprendre les commandes — faites un petit geste depuis le Vrai Self. Cent fois si nécessaire.</div></div></div>
+<div class="step-n"><div class="step-nb">2</div><div class="step-b"><div class="step-t">Journal de progression</div><div class="step-tx">Tracer les moments de Vrai Self — ils s'accumulent et deviennent la nouvelle route.</div></div></div>
+<div class="step-n"><div class="step-nb">3</div><div class="step-b"><div class="step-t">Célébrer chaque acte d'authenticité</div><div class="step-tx">Chaque moment d'expression vraie mérite d'être célébré — même le plus infime.</div></div></div>
+<div class="step-n"><div class="step-nb">4</div><div class="step-b"><div class="step-t">Progression graduelle des risques identitaires</div><div class="step-tx">Commencez par les contextes les plus sûrs. Élargissez progressivement le territoire du Vrai Self.</div></div></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl done">E</div><div class="pl done">U</div><div class="pl act">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 6 · Défis progressifs 1/2</span><span class="pg-nb">47</span></div>
+<span class="tag">16 défis de dissolution identitaire</span>
+<h2>Vos défis progressifs</h2>
+<p class="sub">Élargir progressivement l'espace du Vrai Self · cochez au moment de l'accomplissement</p>
+<div class="rule-g"></div>
+<h3>🌱 Premiers pas — toucher le Vrai Self</h3>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>3/10</strong> — Passer 30 minutes à faire quelque chose que vous aimiez enfant — sans vous justifier</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>3/10</strong> — Modifier une habitude ancrée depuis longtemps et observer ce que ça change dans votre sens de vous-même</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>4/10</strong> — Répondre honnêtement à la question «&nbsp;comment tu vas vraiment&nbsp;?&nbsp;» plutôt que «&nbsp;bien, merci&nbsp;»</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>4/10</strong> — Exprimer une opinion qui n'est pas celle que le contexte attend de vous</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>4/10</strong> — Essayer un style ou un look différent pendant une journée — et observer l'anxiété identitaire sans fuir</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>5/10</strong> — Faire quelque chose qui «&nbsp;ne vous ressemble pas&nbsp;» — et constater que vous êtes toujours vous après</span></div>
+<h3 style="margin-top:3mm">🔓 Libérer des parties cachées</h3>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>5/10</strong> — Partager avec quelqu'un de confiance quelque chose que vous n'avez jamais osé dire sur vous-même</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>5/10</strong> — Exprimer un désir, une passion, une envie que vous avez longtemps gardée secrète par peur du jugement</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>6/10</strong> — Abandonner un rôle qui ne vous appartient plus — explicitement, auprès de quelqu'un</span></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl done">E</div><div class="pl done">U</div><div class="pl act">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 6 · Défis progressifs 2/2</span><span class="pg-nb">48</span></div>
+<span class="tag">Défis — suite</span>
+<h2>Transformer l'identité profonde</h2>
+<div class="rule-g"></div>
+<h3>💜 Remises en question profondes</h3>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>6/10</strong> — Identifier une croyance «&nbsp;je suis quelqu'un qui...&nbsp;» et agir délibérément à son encontre pendant une semaine</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>7/10</strong> — Engager une activité qui ne rentre dans aucun de vos rôles habituels — et rester dans l'inconfort identitaire</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>7/10</strong> — Remettre en question une croyance fondamentale sur vous-même — et la partager avec quelqu'un</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>7/10</strong> — Dire «&nbsp;je ne sais pas qui je suis dans ce contexte&nbsp;» — et rester dans cette incertitude sans la fermer</span></div>
+<h3 style="margin-top:3mm">🌟 Mutations identitaires majeures</h3>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>8/10</strong> — S'autoriser à évoluer dans une direction inattendue — prendre un premier pas concret vers quelque chose que vous avez longtemps refusé d'être</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>8/10</strong> — Avoir une conversation profonde sur qui vous êtes vraiment — avec quelqu'un en qui vous avez confiance</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>9/10</strong> — Laisser quelqu'un voir une part de vous que vous n'avez jamais montrée — et rester avec leur regard</span></div>
+<div class="cb-row" onclick="togCb(this)"><div class="cb"></div><span class="cb-lbl"><strong>9/10</strong> — Vivre une semaine entière en prenant des décisions depuis le Vrai Self — pas depuis les rôles attendus</span></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl done">E</div><div class="pl done">U</div><div class="pl act">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 6 · Journal semaines 11–12</span><span class="pg-nb">49</span></div>
+<span class="tag">Journal de bord</span>
+<h2>Semaines 11–12 — Journal de renforcement</h2>
+<p class="sub">Tracer le chemin de retour vers soi-même</p>
+<div class="rule-g"></div>
+<h3>Semaine 11</h3>
+<p class="exo-q">Défi tenté — et résultat&nbsp;:</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<p class="exo-q">Ce que je célèbre — même un moment de Vrai Self compte&nbsp;!</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder=""></div></div>
+<p class="exo-q">Ce que j'emporte dans la semaine suivante&nbsp;:</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder=""></div></div>
+<h3 style="margin-top:2.5mm">Semaine 12 — La dernière</h3>
+<p class="exo-q">Le moment où j'ai senti que quelque chose avait vraiment changé — un instant de Vrai Self reconnu et assumé&nbsp;:</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<p class="exo-q">Ce que je célèbre — depuis moi, pas depuis le personnage&nbsp;:</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<p class="exo-q">Ce à quoi je m'engage pour continuer le chemin de retour vers moi-même&nbsp;:</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder=""></div><div class="wline"><input type="text" placeholder=""></div></div>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl done">E</div><div class="pl done">U</div><div class="pl act">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 6 · Bilan 12 semaines</span><span class="pg-nb">50</span></div>
+<span class="tag">Grand bilan final</span>
+<h2>Bilan — 12 semaines de retour vers soi</h2>
+<p class="sub">Mesurer le chemin — depuis les yeux du Vrai Self</p>
+<div class="rule-g"></div>
+<div class="g2" style="margin-bottom:3mm">
+<div class="gcell"><span class="gc-lbl">Au début — le Faux Self</span>
+<p class="body" style="font-size:7pt">→ Jouer des rôles sans savoir lequel était vrai<br>→ Mélancolie diffuse du vrai self étouffé<br>→ Rigidité identitaire face au changement<br>→ Se sentir étranger·e à sa propre vie</p></div>
+<div class="gcell" style="border-color:#9030d040"><span class="gc-lbl" style="color:#9030d0">Aujourd'hui — le Vrai Self émerge</span>
+<p class="body" style="font-size:7pt">✓ Reconnaître les rôles sans en être prisonnier·e<br>✓ Accueillir le vertige identitaire sans fuir<br>✓ Agir depuis ses valeurs vraies<br>✓ Être chez soi dans sa propre vie</p></div>
+</div>
+<p class="exo-q">Au début, je décrivais mon Masque Violet comme&nbsp;:</p>
+<div class="wlines"><div class="wline"><input type="text" placeholder=""></div><div class="wline"><input type="text" placeholder=""></div></div>
+<p class="exo-q">Le moment le plus transformateur de ces 12 semaines — le plus grand retour vers moi-même&nbsp;:</p>
+<textarea class="wta" rows="3" placeholder=""></textarea>
+<p class="exo-q">Ce que je veux continuer à pratiquer — et pourquoi&nbsp;:</p>
+<textarea class="wta" rows="2" placeholder=""></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl done">E</div><div class="pl done">U</div><div class="pl act">R</div></div></div>
+</div><div class="page page-c">
+<div class="pg-hd"><span class="pg-ch">Module 6 · Lettre au soi futur</span><span class="pg-nb">51</span></div>
+<span class="tag">L'exercice final — et le plus profond</span>
+<h2>Lettre à la personne que vous serez dans 1 an</h2>
+<p class="sub">La lettre la plus importante de la collection. Écrivez depuis le Vrai Self — pas depuis le personnage.</p>
+<div class="rule-g"></div>
+<p class="body" style="font-size:7pt;font-style:italic;color:var(--inkl);margin-bottom:3mm">Écrivez à la version de vous-même qui aura choisi, pendant un an, de vivre depuis sa vraie nature — couche après couche, acte après acte, courage après courage.</p>
+<p style="font-family:'Cormorant Garamond',serif;font-size:9pt;font-weight:500;font-style:italic;color:var(--ink);margin-bottom:3mm">À toi, dans un an.</p>
+<textarea class="wta" rows="4" placeholder="Dis-lui où tu en es aujourd'hui — les rôles que tu as commencé à poser, les moments de Vrai Self aperçus..."></textarea>
+<textarea class="wta" rows="4" placeholder="Dis-lui ce que tu espères pour elle — dans son rapport à elle-même, dans ses relations, dans sa vie..."></textarea>
+<textarea class="wta" rows="4" placeholder="Termine par ce à quoi tu refuses de renoncer — ta vraie nature, ta joie, ta liberté d'être..."></textarea>
+<div class="pg-ft"><span class="pg-ft-t">© Céline Bourbon · V.A.L.E.U.R©</span><div class="prog"><div class="pl0 ">0</div><div class="pl done">V</div><div class="pl done">A</div><div class="pl done">L</div><div class="pl done">E</div><div class="pl done">U</div><div class="pl done">R</div></div></div>
+</div><div class="end-page">
+<div class="end-bg" style="top:30mm;left:50%;transform:translateX(-50%)">VALEUR</div>
+<div class="end-inner">
+  <p class="end-small">Méthode V.A.L.E.U.R© · Masque Violet · 12 semaines · Volume VII — Édition finale</p>
+  <h2 class="end-big">Vous avez fait<br><em>le chemin.</em></h2>
+  <div class="end-rule"></div>
+  <p class="end-pq" style="max-width:340px;margin:0 auto 5mm;text-align:center">Vous avez vu le personnage. Accueilli le vertige de ne plus savoir exactement qui vous étiez. Localisé le Vrai Self dans le corps. Exploré les 7 couches du Faux Self. Unifié le personnage et l'être. Et vécu, semaine après semaine, depuis une nature plus vaste et plus libre.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2mm;margin-bottom:5mm;max-width:360px;margin-left:auto;margin-right:auto">
+    <span style="font-family:Jost,sans-serif;font-size:5.5pt;letter-spacing:.18em;text-transform:uppercase;color:#9030d08c;border:.4px solid #9030d033;padding:.4em .8em;text-align:center">V · Vous voyez</span><span style="font-family:Jost,sans-serif;font-size:5.5pt;letter-spacing:.18em;text-transform:uppercase;color:#9030d08c;border:.4px solid #9030d033;padding:.4em .8em;text-align:center">A · Vous accueillez</span><span style="font-family:Jost,sans-serif;font-size:5.5pt;letter-spacing:.18em;text-transform:uppercase;color:#9030d08c;border:.4px solid #9030d033;padding:.4em .8em;text-align:center">L · Vous localisez</span><span style="font-family:Jost,sans-serif;font-size:5.5pt;letter-spacing:.18em;text-transform:uppercase;color:#9030d08c;border:.4px solid #9030d033;padding:.4em .8em;text-align:center">E · Vous explorez</span><span style="font-family:Jost,sans-serif;font-size:5.5pt;letter-spacing:.18em;text-transform:uppercase;color:#9030d08c;border:.4px solid #9030d033;padding:.4em .8em;text-align:center">U · Vous unifiez</span><span style="font-family:Jost,sans-serif;font-size:5.5pt;letter-spacing:.18em;text-transform:uppercase;color:#9030d08c;border:.4px solid #9030d033;padding:.4em .8em;text-align:center">R · Vous renforcez</span>
+  </div>
+  <div class="end-rule"></div>
+  <p class="end-pq" style="max-width:340px;margin:0 auto 5mm;text-align:center">«&nbsp;Sous tous ces masques, il y a un Soi plus vaste, plus libre, plus vrai. La joie spontanée, la curiosité, la capacité d'émerveillement que vous aviez enfant sont toujours là. Vous venez de les retrouver.&nbsp;»</p>
+  <p class="end-cite" style="font-size:7.5pt">Céline Bourbon — Méthode V.A.L.E.U.R©<br>De la peur à la joie d'être soi · Éditions L'Harmattan</p>
+  <div style="margin-top:5mm;padding-top:4mm;border-top:.4px solid #9030d030">
+    <p style="font-family:'Cormorant Garamond',serif;font-size:8.5pt;font-style:italic;text-align:center;color:var(--inkl);line-height:1.8">«&nbsp;De la peur à la joie d'être soi.&nbsp;»<br>Ce n'est pas un titre. C'est un chemin.<br>Vous venez de le traverser.</p>
+  </div>
+  <p style="font-family:Jost,sans-serif;font-size:5pt;letter-spacing:.15em;text-transform:uppercase;color:#9030d040;margin-top:4mm">© Céline Bourbon · Tous droits réservés · Reproduction interdite · Collection V.A.L.E.U.R© complète</p>
+</div>
+</div>
+</div>
+
+<nav class="page-nav">
+  <span class="nav-brand">Masque Violet · V.A.L.E.U.R©</span>
+  <div class="nav-mods">
+    <div class="nm cur" onclick="scrollTo('cover')" title="Couverture">◉</div>
+    <div class="nm" onclick="scrollTo('intro')" title="Introduction">·</div>
+    <div class="nm" onclick="scrollTo('mod0')" title="Comprendre">0</div>
+    <div class="nm" onclick="scrollTo('mod1')" title="Voir">V</div>
+    <div class="nm" onclick="scrollTo('mod2')" title="Accueillir">A</div>
+    <div class="nm" onclick="scrollTo('mod3')" title="Localiser">L</div>
+    <div class="nm" onclick="scrollTo('mod4')" title="Explorer">E</div>
+    <div class="nm" onclick="scrollTo('mod5')" title="Unifier">U</div>
+    <div class="nm" onclick="scrollTo('mod6')" title="Renforcer">R</div>
+  </div>
+  <button onclick="printLivret()" style="font-family:'Jost',sans-serif;font-size:.55rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);background:var(--gold);border:none;padding:.45em 1.1em;border-radius:1px;cursor:pointer;white-space:nowrap;transition:opacity .2s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">🖨 Imprimer / PDF</button>
+</nav>
+<div id="print-tip" style="display:none;position:fixed;bottom:62px;right:1.2rem;z-index:300;background:var(--v800);border:1px solid #9030d04d;padding:.75rem 1rem;border-radius:2px;max-width:270px;box-shadow:0 4px 20px rgba(0,0,0,.5)">
+  <p style="font-family:'Jost',sans-serif;font-size:.62rem;color:rgba(249,245,238,.82);line-height:1.65;margin-bottom:.5rem">Imprimez <strong style="color:var(--gold)">après avoir rempli vos réponses</strong> pour conserver une trace papier.</p>
+  <p style="font-family:'Jost',sans-serif;font-size:.58rem;color:#9030d085;line-height:1.55">Format recommandé&nbsp;: A5 · Marges&nbsp;: aucune<br>Cocher «&nbsp;Graphiques d'arrière-plan&nbsp;»</p>
+</div>
+<script>
+function printLivret(){
+  const tip=document.getElementById('print-tip');
+  tip.style.display='block';
+  setTimeout(()=>{tip.style.display='none';window.print();},2200);
+}
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('copy',e=>e.preventDefault());
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&['c','u','s','a'].includes(e.key.toLowerCase()))e.preventDefault();});
+function selDot(el){el.closest('.scale-dots').querySelectorAll('.sd').forEach(d=>d.classList.remove('on'));el.classList.add('on');save();}
+function togCb(row){row.querySelector('.cb').classList.toggle('on');save();}
+function togVal(el){
+  el.style.background=el.style.background?'':'var(--v600)';
+  el.style.color=el.style.color==='var(--v100)'?'':'var(--v100)';
+  el.style.borderColor=el.style.borderColor==='var(--v400)'?'':'var(--v400)';
+  save();
+}
+function updateNav(){
+  const sections=['cover','intro','mod0','mod1','mod2','mod3','mod4','mod5','mod6'];
+  let active=0;
+  sections.forEach((id,i)=>{const el=document.getElementById(id);if(!el)return;if(el.getBoundingClientRect().top<=200)active=i;});
+  document.querySelectorAll('.nm').forEach((n,i)=>n.classList.toggle('cur',i===active));
+}
+window.addEventListener('scroll',updateNav);
+function scrollTo(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});}
+const KEY='valeur_livret_violet_v1';
+function save(){
+  const data={};
+  document.querySelectorAll('input[type=text]').forEach((el,i)=>data['i'+i]=el.value);
+  document.querySelectorAll('textarea').forEach((el,i)=>data['t'+i]=el.value);
+  document.querySelectorAll('.cb.on').forEach((el,i)=>{const idx=Array.from(document.querySelectorAll('.cb')).indexOf(el);data['cb'+idx]=1;});
+  try{localStorage.setItem(KEY,JSON.stringify(data));}catch(e){}
+}
+function load(){
+  try{
+    const data=JSON.parse(localStorage.getItem(KEY)||'{}');
+    document.querySelectorAll('input[type=text]').forEach((el,i)=>{if(data['i'+i])el.value=data['i'+i];});
+    document.querySelectorAll('textarea').forEach((el,i)=>{if(data['t'+i])el.value=data['t'+i];});
+    const cbs=document.querySelectorAll('.cb');
+    Object.keys(data).forEach(k=>{if(k.startsWith('cb')){const idx=parseInt(k.slice(2));if(cbs[idx])cbs[idx].classList.add('on');}});
+  }catch(e){}
+}
+document.querySelectorAll('input[type=text],textarea').forEach(el=>el.addEventListener('input',save));
+window.addEventListener('load',()=>{load();updateNav();});
+</script>
+</body>
+</html>
